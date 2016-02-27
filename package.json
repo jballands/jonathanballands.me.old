@@ -1,0 +1,19 @@
+{
+  "name": "jonathanballands.me",
+  "version": "1.0.0",
+  "description": "The personal website of Jonathan Ballands",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jballands/jonathanballands.me.git"
+  },
+  "author": "Jonathan Ballands",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-babel": "~6.1.2"
+  },
+  "dependencies": {
+    "express": "~4.13.4",
+    "express-handlebars": "~3.0.0"
+  }
+}

@@ -18,7 +18,8 @@ export default function() {
 
   router.get('', (req, res) => {
     res.render('home', {
-      layout: 'default'
+      layout: 'default',
+      title: 'jonathanballands.me'
     });
   });
 

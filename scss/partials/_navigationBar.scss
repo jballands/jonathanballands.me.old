@@ -1,0 +1,36 @@
+.navigation-bar {
+  position: absolute;
+
+  top: 25px;
+  left: 35px;
+  right: 35px;
+
+  z-index: 1000;
+
+  color: $white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20pt;
+  letter-spacing: 0.5pt;
+}
+
+.navigation-items {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 16pt;
+  letter-spacing: 1.5pt;
+}
+
+.navigation-item {
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+}

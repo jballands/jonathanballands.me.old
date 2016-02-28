@@ -1,0 +1,18 @@
+{
+  "development": {
+    "build": {
+      "useCompressedCss": false
+    },
+    "execution": {
+      "port": 3000
+    }
+  },
+  "production": {
+    "build": {
+      "useCompressedCss": true
+    },
+    "execution": {
+      "port": 3000
+    }
+  }
+}

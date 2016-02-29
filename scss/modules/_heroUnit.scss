@@ -1,4 +1,11 @@
+.nine-four-ratio {
+  @include aspect-ratio(9, 4);
+}
+
 .hero-unit {
-  height: 700px;
-  padding-top: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

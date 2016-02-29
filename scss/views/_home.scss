@@ -1,8 +1,21 @@
 .homepage-hero-unit {
-  background-image: url('austin_bridge_3142x2207.jpg');
+
+  /* Big screens */
+  @media (min-width: 1441px) {
+    background-image: url('austin_bridge_3142x2207.jpg');
+  }
+  /* Laptops */
+  @media (min-width: 720px) and (max-width: 1440px) {
+    background-image: url('austin_bridge_1440x1011.jpg');
+  }
+  /* Mobile */
+  @media (max-width: 719px) {
+    background-image: url('austin_bridge_720x506.jpg');
+  }
+
   background-size: cover;
 }
 
 .homepage-hero-unit-container {
-  
+
 }

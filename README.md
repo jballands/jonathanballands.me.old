@@ -9,6 +9,9 @@ to use this repository for learning or for developing your own personal site.
 
 _Note: This guide assumes you are using [Node 4.3](https://nodejs.org/en/)._
 
+1. Make sure Gulp is installed on your version of Node: `$ npm install -g gulp`
+2. Install this project's dependencies: `$ npm install`
+
 ## Usage
 
 Here's some stuff about usage.

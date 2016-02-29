@@ -1,4 +1,6 @@
 .homepage-hero-unit {
+  background-size: cover;
+  background-position: center top;
 
   /* Big screens */
   @media (min-width: 1441px) {
@@ -12,10 +14,18 @@
   @media (max-width: 719px) {
     background-image: url('austin_bridge_720x506.jpg');
   }
-
-  background-size: cover;
 }
 
 .homepage-hero-unit-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-items: center;
 
+  width: 100%;
+  margin: 0 55px;
+
+  div {
+    flex: 0 1 50%;
+  }
 }

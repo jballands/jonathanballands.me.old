@@ -122,7 +122,7 @@ gulp.task('bundle', ['clean', 'transpile-server', 'make-config-file'], function(
     var appBundler = browserify({
       entries: route,
       debug: BUILD_OPTIONS.useSourcemaps,
-      transform: [babelify]
+      transform: ['babelify', { 'presets': ['es2015'] }]
     });
 
     // Begin bundling client-code together

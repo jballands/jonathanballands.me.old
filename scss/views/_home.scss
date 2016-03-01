@@ -1,31 +1,30 @@
 .homepage-hero-unit {
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
+
+  background-color: $backgroundImageTint;
+  background-blend-mode: multiply;
 
   /* Big screens */
-  @media (min-width: 1441px) {
+  @media (min-width: $desktopMin) {
     background-image: url('austin_bridge_3142x2207.jpg');
   }
   /* Laptops */
-  @media (min-width: 720px) and (max-width: 1440px) {
+  @media (max-width: $laptopMax) and (min-width: $laptopMin) {
     background-image: url('austin_bridge_1440x1011.jpg');
   }
   /* Mobile */
-  @media (max-width: 719px) {
-    background-image: url('austin_bridge_720x506.jpg');
+  @media (max-width: $mobileMax) {
+    background-image:  url('austin_bridge_768x539.jpg');
   }
 }
 
-.homepage-hero-unit-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: left;
-  align-items: center;
+.homepage-hero-unit-tagline {
+  flex: 0 1 calc(50% - 200px);
+  margin: 0 100px;
+}
 
-  width: 100%;
-  margin: 0 55px;
-
-  div {
-    flex: 0 1 50%;
-  }
+.homepage-hero-unit-description {
+  flex: 0 1 calc(50% - 200px);
+  margin: 0 100px;
 }

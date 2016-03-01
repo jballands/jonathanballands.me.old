@@ -5,3 +5,10 @@
   display: flex;
   justify-content: center;
 }
+
+.hero-unit-container {
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: space-between;
+  align-items: center;
+}

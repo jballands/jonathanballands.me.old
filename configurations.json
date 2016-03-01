@@ -1,7 +1,8 @@
 {
   "development": {
     "build": {
-      "useCompressedCss": false
+      "useCompressedCss": false,
+      "useSourcemaps": true
     },
     "execution": {
       "port": 3000
@@ -9,7 +10,8 @@
   },
   "production": {
     "build": {
-      "useCompressedCss": true
+      "useCompressedCss": true,
+      "useSourcemaps": true
     },
     "execution": {
       "port": 3000

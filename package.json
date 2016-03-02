@@ -39,5 +39,8 @@
     "express-handlebars": "~3.0.0",
     "jquery": "~2.2.1",
     "loglevel": "~1.4.0"
+  },
+  "babel": {
+    "presets": ["es2015"]
   }
 }

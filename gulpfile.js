@@ -122,22 +122,25 @@ gulp.task('bundle', ['clean', 'transpile-server', 'make-config-file'], function(
     var appBundler = browserify({
       entries: route,
       debug: BUILD_OPTIONS.useSourcemaps,
-      transform: ['babelify', { 'presets': ['es2015'] }]
+      transform: ['babelify']
     });
 
     // Begin bundling client-code together
     return appBundler
       .bundle()
+      .on('error', function (error) {
+        gutil.log('BUNDLE ERROR -> ', error.message);
+        this.emit('end');
+      })
       .pipe(source(BUILD_OPTIONS.useMinifiedDependencies ? 'bundle.min.js' : 'bundle.js'))
       .pipe(buffer())
-      .pipe(sourcemaps.init({loadMaps: true}))
-      .pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, uglify()))
+      //.pipe(sourcemaps.init({loadMaps: true}))
+      //.pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, uglify()))
       .pipe(header('/* \n *  GENERATED FILE; DO NOT MODIFY!!! \n */\n\n'))
-      .on('error', gutil.log)
-      .pipe(gulpif(!BUILD_OPTIONS.useSourcemaps, sourcemaps.write('./')))
+      //.pipe(gulpif(!BUILD_OPTIONS.useSourcemaps, sourcemaps.write('./')))
       .pipe(gulp.dest(path.join('./dist/public/js/', folder)))
       .pipe(print(function(filepath) {
-        return 'bundle created: ' + filepath;
+        return 'Bundle successfully created -> ' + filepath;
       }));
   });
 
@@ -197,22 +200,18 @@ gulp.task('hbs-injection', ['clean', 'transpile-server', 'make-config-file', 'bu
   return gulp.src('./views/**/*.hbs')
     .pipe(foreach(function(stream, file) {
 
-      var jquery = gulp.src('**/jquery.*',
-        { read: false, cwd: __dirname + '/dist/public' });
-
       var libraries = gulp.src(['**/*.js', '!**/bundle.*', '!**/angular.*', '!**/angular-route.*'],
         { read: false, cwd: __dirname + '/dist/public' });
 
       var css = gulp.src(['**/*.css'],
         { read: false, cwd: __dirname + '/dist/public' });
 
-      var bundleRegex = 'app/' + path.basename(file.relative, '.hbs') + '/bundle.*';
-      var bundle = gulp.src(bundleRegex,
-        { read: false, cwd: __dirname + '/dist/public' });
+      var bundleGlob = 'js/' + path.basename(file.relative, '.hbs') + '/bundle.*';
+      var bundle = gulp.src(bundleGlob, { read: false, cwd: __dirname + '/dist/public' });
 
       // Go ahead and inject libraries into the hbs file
-      let librariesInject = stream.pipe(inject(series(jquery, libraries, css, bundle), {name: 'libraries'}));
-      // let bundleInject = stream.pipe(inject(bundle, {name: 'bundle'}));
+      let librariesInject = stream.pipe(inject(series(libraries, css, bundle), {name: 'libraries'}));
+      let bundleInject = stream.pipe(inject(bundle, {name: 'bundle'}));
       let cssInject = stream.pipe(inject(css));
 
       return merge([librariesInject, cssInject]);

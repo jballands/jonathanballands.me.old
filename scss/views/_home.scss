@@ -5,6 +5,8 @@
   background-color: $backgroundImageTint;
   background-blend-mode: multiply;
 
+  z-index: 100;
+
   /* Big screens */
   @media (min-width: $desktopMin) {
     background-image: url('austin_bridge_3142x2207.jpg');
@@ -19,20 +21,26 @@
   }
 }
 
-.homepage-hero-unit-tagline {
-  flex: 1 1 calc(50% - 65px);
-  margin: 0 15px 0 50px;
-}
-
-.homepage-hero-unit-description {
-  flex: 1 1 calc(50% - 65px);
-  margin: 0 15px 0 50px;
-}
-
 // -----------------------------------------------------------------------------
 
 .ibm-hero-unit {
   background: $teal;
+
+  #ibm-hero-unit-iphone {
+    height: 500px;
+    position: absolute;
+    bottom: 20px;
+    left: 5px;
+    z-index: 10;
+  }
+
+  #ibm-hero-unit-macbook {
+    height: 600px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    z-index: 9;
+  }
 }
 
 // -----------------------------------------------------------------------------

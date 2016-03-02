@@ -11,4 +11,19 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.hero-unit-column {
+  flex: 1 1 calc(50% - 65px);
+  padding: 0 15px 0 50px;
+
+  position: relative;
+  height: 100%;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }

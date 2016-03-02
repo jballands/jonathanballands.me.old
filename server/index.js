@@ -37,7 +37,7 @@ app.set('views', `${__dirname}/../views`)
 //
 
 app.use(compress());
-app.use(express.static(path.join(__dirname, '../public'), { maxAge: FIFTEEN_MINS }));
+app.use(express.static(path.join(__dirname, '../public')));
 
 //
 //  Routing --------------------------------------------------------------------

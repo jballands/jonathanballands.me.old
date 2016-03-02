@@ -4,5 +4,11 @@
  */
 
 export default function() {
-  console.log('Hello from JS!');
+  $(window).on('scroll', function(){
+    if($("body").scrollTop() === 500){
+      $(window).off('scroll');
+      console.log('roah!');
+      // Do some stuff here ..
+    }
+  }
 }

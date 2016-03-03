@@ -4,5 +4,8 @@
  */
 
 import IbmSwiftAnimation from './ibmSwiftAnimation.js';
+import easing from '../_utils/jqueryEasing.js'
 
+// easing();
 IbmSwiftAnimation();
+easing();

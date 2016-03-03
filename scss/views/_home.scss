@@ -29,17 +29,21 @@
   #ibm-hero-unit-iphone {
     height: 425px;
     position: absolute;
-    bottom: 25px;
     left: 30px;
     z-index: 10;
+
+    // For jQuery animation
+    top: -100%;
   }
 
   #ibm-hero-unit-macbook {
     height: 600px;
     position: absolute;
     top: 50px;
-    left: 100px;
     z-index: 9;
+
+    // For jQuery animation
+    left: 100%;
   }
 }
 
@@ -47,6 +51,24 @@
 
 .somersault-hero-unit {
   background: $orange;
+
+  #somersault-hero-unit-back {
+    position: absolute;
+    right: 250px;
+    z-index: 9;
+
+    // For jQuery animation
+    top: 100%;
+  }
+
+  #somersault-hero-unit-front {
+    position: absolute;
+    right: 50px;
+    z-index: 10;
+
+    // For jQuery animation
+    top: 100%;
+  }
 }
 
 // -----------------------------------------------------------------------------

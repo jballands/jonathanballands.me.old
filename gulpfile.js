@@ -111,7 +111,7 @@ gulp.task('bundle', ['clean', 'transpile-server', 'make-config-file'], function(
   // Fetch all the directories in the app directory
   var folders = fs.readdirSync('./js')
     .filter(function(folder) {
-      return fs.statSync(path.join('./js', folder)).isDirectory();
+      return fs.statSync(path.join('./js', folder)).isDirectory() && folder.lastIndexOf('_', 0);
     });
 
   // Execute the bundler on every index.js in the app directory
@@ -256,7 +256,7 @@ gulp.task('start-server', ['build'], function() {
 //  Watch
 //
 gulp.task('watch', ['build', 'start-server'], function() {
-  watch(['app/**/*', 'server/**/*', 'scss/**/*', 'views/**/*', 'clientVendors.json', 'configurations.json'], function () {
+  watch(['js/**/*', 'server/**/*', 'scss/**/*', 'views/**/*', 'assets/**/*', 'clientVendors.json', 'configurations.json'], function () {
     console.info(gutil.colors.cyan('\nChange detected. Rebuilding...\n'));
     gulp.start('default');
   });

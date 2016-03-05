@@ -3,9 +3,11 @@
  *  © 2016 Jonathan Ballands
  */
 
-import IbmSwiftAnimation from './ibmSwiftAnimation.js';
+import ibmSwiftAnimation from './ibmSwiftAnimation.js';
+import somersaultAnimation from './somersaultAnimation.js';
 import easing from '../_utils/jqueryEasing.js'
 
-// easing();
-IbmSwiftAnimation();
 easing();
+
+ibmSwiftAnimation();
+somersaultAnimation();

@@ -1,0 +1,16 @@
+.hello-my-name-is-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hello-my-name-is-salutation {
+  font-family: 'Yellowtail', cursive;
+  font-size: 42pt;
+  padding-right: 275px;
+}
+
+.hello-my-name-is-typing {
+  @extend .title;
+}

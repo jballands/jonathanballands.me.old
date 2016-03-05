@@ -77,8 +77,10 @@
   background: $orange;
 
   #somersault-hero-unit-back {
+    width: 275px;
+
     position: absolute;
-    right: 250px;
+    right: 300px;
     z-index: 9;
 
     // For jQuery animation
@@ -86,8 +88,10 @@
   }
 
   #somersault-hero-unit-front {
+    width: 275px;
+
     position: absolute;
-    right: 50px;
+    right: 100px;
     z-index: 10;
 
     // For jQuery animation

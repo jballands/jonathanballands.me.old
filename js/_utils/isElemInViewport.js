@@ -15,11 +15,12 @@ export default function(el) {
   let rect = el.getBoundingClientRect();
 
   // Modification: Trigger at the halfway point
-  const halfwayPoint = rect.bottom - ((rect.bottom - rect.top) / 2);
-  return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
-  );
+  const ONE_THIRD = (rect.bottom - rect.top) / 3;
+
+  const TOP_BIT = (rect.top >= 0) &&
+    ((rect.bottom - ONE_THIRD) <= (window.innerHeight || document.documentElement.clientHeight));
+  const BOTTOM_BIT = ((rect.top + ONE_THIRD) >= 0) &&
+    (rect.bottom <= (window.innerHeight || document.documentElement.clientHeight));
+
+  return (TOP_BIT || BOTTOM_BIT);
 }

@@ -5,9 +5,8 @@
 
 import ibmSwiftAnimation from './ibmSwiftAnimation.js';
 import somersaultAnimation from './somersaultAnimation.js';
-import easing from '../_utils/jqueryEasing.js'
-
-easing();
+import selfPromotionAnimation from './selfPromotionAnimation.js';
 
 ibmSwiftAnimation();
 somersaultAnimation();
+selfPromotionAnimation();

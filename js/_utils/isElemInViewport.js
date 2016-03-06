@@ -5,7 +5,6 @@
  *  http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport/7557433#7557433
  */
 
-
 export default function(el) {
   //special bonus for those using jQuery
   if (typeof jQuery === 'function' && el instanceof jQuery) {

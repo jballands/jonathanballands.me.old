@@ -7,10 +7,45 @@
 
 .hello-my-name-is-salutation {
   font-family: 'Yellowtail', cursive;
-  font-size: 42pt;
+  font-size: 40pt;
   padding-right: 275px;
 }
 
 .hello-my-name-is-typing {
   @extend .title;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 1em;
+  padding-right: 100px;
+}
+
+.hello-my-name-is-description {
+  max-width: 600px;
+  padding-left: 275px;
+  margin-top: 10px;
+}
+
+.blinking-cursor {
+  display: inline-block;
+  height: 1em;
+  width: 2px;
+  background: $darkPurple;
+  margin-left: 3px;
+
+  @include animation('blink 0.75s infinite');
+}
+
+@include keyframes(blink) {
+  0% {
+    background: transparent;
+  }
+  50% {
+    background: $darkPurple;
+  }
+  100% {
+    background: transparent;
+  }
 }

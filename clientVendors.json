@@ -1,9 +1,16 @@
 [
   {
-    "moduleName": "jquery",
     "dev": "node_modules/jquery/dist/jquery.js",
     "cdn": "//code.jquery.com/jquery-2.2.1.min.js",
     "prod": "node_modules/jquery/dist/jquery.min.js",
     "cdn_test": "window.jQuery"
+  },
+  {
+    "dev": "js/_vendors/jqueryEasing.js",
+    "prod": "js/_vendors/jqueryEasing.js"
+  },
+  {
+    "dev": "js/_vendors/typed.js",
+    "prod": "js/_vendors/typed.js"
   }
 ]

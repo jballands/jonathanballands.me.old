@@ -80,7 +80,7 @@
     width: 275px;
 
     position: absolute;
-    right: 300px;
+    right: calc(25% + 150px);
     z-index: 9;
 
     // For jQuery animation
@@ -91,7 +91,7 @@
     width: 275px;
 
     position: absolute;
-    right: 100px;
+    right: calc(25%);
     z-index: 10;
 
     // For jQuery animation

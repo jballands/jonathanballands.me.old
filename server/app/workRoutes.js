@@ -1,5 +1,5 @@
 /*
- *  /server/app/index.js
+ *  /server/app/workRoutes.js
  *  © 2016 Jonathan Ballands
  */
 
@@ -7,7 +7,6 @@ import express from 'express';
 
 // -----------------------------------------------------------------------------
 
-import WorkRouter from './workRoutes.js';
 import {log} from '../foundation.js';
 
 // -----------------------------------------------------------------------------
@@ -17,24 +16,19 @@ export default function() {
 
 // -----------------------------------------------------------------------------
 
-  router.get('', (req, res) => {
-    res.render('home', {
+  router.get('/ibm-swift', (req, res) => {
+    res.render('ibm-swift', {
       layout: 'default',
-      title: 'jonathanballands.me'
+      title: 'IBM Swift - jonathanballands.me'
     });
   });
 
-// -----------------------------------------------------------------------------
-
-  router.get('/resume', (req, res) => {
-    res.render('resume', {
-      layout: 'default'
+  router.get('/somersault', (req, res) => {
+    res.render('somersault', {
+      layout: 'default',
+      title: 'Somersault - jonathanballands.me'
     });
   });
-
-// -----------------------------------------------------------------------------
-
-router.use('/work', WorkRouter());
 
 // -----------------------------------------------------------------------------
 

@@ -22,17 +22,18 @@ export default function () {
     'ACL',
     'Scrum Mastering',
     'Fluxxor',
-    'Flop Shots',
+    'Tricky Golf Shots',
     'Handlebars',
     'Agile',
-    'ATX',
+    'Austin, TX',
     'A lot of stuff'
   ];
 
   $('#self-promotion-tty').typed({
     strings: THINGS_I_KNOW,
-    typeSpeed: 150,
+    typeSpeed: 160,
     loop: true,
-    showCursor: false
+    showCursor: false,
+    backSpeed: 50
   })
 }

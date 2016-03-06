@@ -4,6 +4,8 @@
 
   display: flex;
   justify-content: center;
+
+  position: relative;
 }
 
 .hero-unit-container {
@@ -28,4 +30,30 @@
   justify-content: center;
 
   overflow: hidden;
+}
+
+.hero-unit-arrow {
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 25px);
+
+  @include animation('bounce 7s infinite');
+}
+
+@include keyframes(bounce) {
+  0% {
+    bottom: 30px;
+  }
+  4% {
+    bottom: 23px;
+  }
+  8% {
+    bottom: 30px;
+  }
+  12% {
+    bottom: 23px;
+  }
+  16% {
+    bottom: 30px;
+  }
 }

@@ -16,16 +16,20 @@ export default function () {
     'Poached Eggs',
     'Redux',
     'Agile',
+    'Unix',
     'Sass',
     'Angular',
     'Gulp.js',
-    'ACL',
+    'SXSW',
+    'Redis',
     'Scrum Mastering',
     'Fluxxor',
     'Tricky Golf Shots',
     'Handlebars',
     'Agile',
     'Austin, TX',
+    'MongoDB',
+    'SAAS',
     'A lot of stuff'
   ];
 

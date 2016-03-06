@@ -41,19 +41,19 @@
 }
 
 @include keyframes(bounce) {
-  0% {
+  30% {
     bottom: 30px;
   }
-  4% {
+  34% {
     bottom: 23px;
   }
-  8% {
+  38% {
     bottom: 30px;
   }
-  12% {
+  42% {
     bottom: 23px;
   }
-  16% {
+  46% {
     bottom: 30px;
   }
 }

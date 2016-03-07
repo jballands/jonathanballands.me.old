@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="54px" height="125px" viewBox="-3 0 60 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 6</title>
+<svg width="125px" height="125px" viewBox="0 0 125 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Management Icon</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Group-6" sketch:type="MSLayerGroup" transform="translate(0.000000, 3.000000)" stroke="#FFFFFF">
-            <ellipse id="Oval-6" stroke-width="5" sketch:type="MSShapeGroup" cx="27" cy="18" rx="18" ry="18"></ellipse>
-            <path d="M38.3196733,42 L46.1443828,42 C50.4829204,42 54,44.9713105 54,48.6316204 L54,112.36838 C54,116.030922 50.4777395,119 46.1479364,119 L7.85206363,119 C3.51548863,119 0,116.02869 0,112.36838 L0,48.6316204 C0,44.9690776 3.51804191,42 7.85900328,42 L16.3668324,42" id="Rectangle-12" stroke-width="5" sketch:type="MSShapeGroup"></path>
-            <rect id="Rectangle-12" stroke-width="2" sketch:type="MSShapeGroup" transform="translate(27.485281, 50.485281) rotate(-315.000000) translate(-27.485281, -50.485281) " x="21.4852814" y="44.4852814" width="12" height="12"></rect>
-            <path d="M24.8935547,54.8886719 L15.9970703,86.5087891 L27.3605957,98.4851074" id="Path-79" stroke-width="2" sketch:type="MSShapeGroup"></path>
-            <path d="M33.7998047,54.7714844 L25.9458008,86.6479492 L37.9213867,98.4506836" id="Path-79" stroke-width="2" sketch:type="MSShapeGroup" transform="translate(31.933594, 76.611084) scale(-1, 1) translate(-31.933594, -76.611084) "></path>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Management-Icon" stroke="#FFFFFF">
+            <g id="Group-6" transform="translate(36.000000, 3.000000)">
+                <ellipse id="Oval-6" stroke-width="5" cx="27" cy="18" rx="18" ry="18"></ellipse>
+                <path d="M38.3196733,42 L46.1443828,42 C50.4829204,42 54,44.9713105 54,48.6316204 L54,112.36838 C54,116.030922 50.4777395,119 46.1479364,119 L7.85206363,119 C3.51548863,119 0,116.02869 0,112.36838 L0,48.6316204 C0,44.9690776 3.51804191,42 7.85900328,42 L16.3668324,42" id="Rectangle-12" stroke-width="5"></path>
+                <rect id="Rectangle-12" stroke-width="2" transform="translate(27.485281, 50.485281) rotate(-315.000000) translate(-27.485281, -50.485281) " x="21.4852814" y="44.4852814" width="12" height="12"></rect>
+                <path d="M24.8935547,54.8886719 L15.9970703,86.5087891 L27.3605957,98.4851074" id="Path-79" stroke-width="2"></path>
+                <path d="M33.7998047,54.7714844 L25.9458008,86.6479492 L37.9213867,98.4506836" id="Path-79" stroke-width="2" transform="translate(31.933594, 76.611084) scale(-1, 1) translate(-31.933594, -76.611084) "></path>
+            </g>
         </g>
     </g>
 </svg>

@@ -27,7 +27,6 @@
   display: flex;
   flex-flow: row no-wrap;
   justify-content: space-between;
-  align-items: center;
 
   margin-top: 50px;
 
@@ -51,4 +50,13 @@
 
 .sidekick-unit-column-header {
   margin-top: 15px;
+}
+
+.sidekick-unit-column-icon {
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

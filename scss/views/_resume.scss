@@ -1,3 +1,23 @@
 .resume {
   background: $darkPurple;
 }
+
+.resume-sidekick-unit {
+  height: 600px;
+}
+
+#code-imac {
+  position: absolute;
+  height: 600px;
+
+  top: 0;
+  left: 100%;
+}
+
+#design-imac {
+  position: absolute;
+  height: 600px;
+
+  top: 0;
+  right: 0;
+}

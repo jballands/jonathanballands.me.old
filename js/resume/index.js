@@ -4,5 +4,7 @@
  */
 
 import selfPromotionAnimation from '../home/selfPromotionAnimation.js';
+import codeiMacAnimation from '../resume/codeiMacAnimation.js';
 
 selfPromotionAnimation();
+codeiMacAnimation();

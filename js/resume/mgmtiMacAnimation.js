@@ -1,5 +1,5 @@
 /*
- *  /js/resume/codeiMacAnimation.js
+ *  /js/resume/mgmtiMacAnimation.js
  *  © 2016 Jonathan Ballands
  */
 
@@ -7,17 +7,17 @@ import isElemInViewport from '../_utils/isElemInViewport.js';
 
 export default function() {
 
-  let hasCodeiMacTriggered = false;
+  let hasMgmtiMacTriggered = false;
 
   // Set up everything
-  let codeiMac = $('#code-imac');
+  let mgmtiMac = $('#mgmt-imac');
   // ---------------------------------------------------------------------------
 
   $(window).on('scroll', () => {
 
-    if (isElemInViewport($('#code-sidekick-unit')) && !hasCodeiMacTriggered) {
-      codeiMac.animate({ left: '150px' }, 600, 'easeOutExpo');
-      hasCodeiMacTriggered = true;
+    if (isElemInViewport($('#mgmt-sidekick-unit')) && !hasMgmtiMacTriggered) {
+      mgmtiMac.animate({ left: '150px' }, 600, 'easeOutExpo');
+      hasMgmtiMacTriggered = true;
     }
 
   });

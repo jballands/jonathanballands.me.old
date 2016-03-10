@@ -23,20 +23,6 @@
   height: 100%;
 }
 
-.sidekick-unit-bit {
-  flex: 1 1 calc(50% - 75px);
-  padding: 0 25px 0 50px;
-
-  position: relative;
-  height: 100%;
-
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-
-  overflow: hidden;
-}
-
 .sidekick-unit-columns-container {
   display: flex;
   flex-flow: row no-wrap;

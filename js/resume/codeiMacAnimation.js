@@ -15,7 +15,7 @@ export default function() {
 
   $(window).on('scroll', () => {
 
-    if (isElemInViewport($('#code-sidekick-unit')) && !hasCodeiMacTriggered) {
+    if (isElemInViewport($('#code-liquid-bit')) && !hasCodeiMacTriggered) {
       codeiMac.animate({ left: '150px' }, 600, 'easeOutExpo');
       hasCodeiMacTriggered = true;
     }

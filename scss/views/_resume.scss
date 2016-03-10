@@ -2,8 +2,12 @@
   background: $darkPurple;
 }
 
-.resume-sidekick-unit {
-  height: 600px;
+.resume-liquid-bit-small {
+  @include liquid-bit(2.5);
+}
+
+.resume-liquid-bit-big {
+  @include liquid-bit(7.5);
 }
 
 #code-imac {

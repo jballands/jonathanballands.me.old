@@ -1,3 +1,33 @@
 .ibm-swift {
   background: $teal;
 }
+
+.ibm-swift-liquid-bit-small {
+  @include liquid-bit(2.25);
+}
+
+.ibm-swift-liquid-bit-big {
+  @include liquid-bit(6.75);
+}
+
+.ibm-swift-spacer {
+  padding-top: 70px;
+}
+
+#ibmswift-imac-1 {
+  position: absolute;
+  height: 700px;
+
+  top: 0;
+  left: 200px;
+  //left: 100%;
+}
+
+#ibmswift-iphone-1 {
+  position: absolute;
+  height: 500px;
+
+  bottom: 0;
+  right: calc(10%);
+  top: calc(50% - 250px);
+}

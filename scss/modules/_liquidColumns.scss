@@ -1,6 +1,6 @@
 .liquid-columns-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row no-wrap;
   justify-content: space-between;
   align-items: center;
 
@@ -9,7 +9,7 @@
 }
 
 .liquid-column {
-  flex: 1 1 calc(50% - 75px);
+  flex: 1 0 calc(50% - 75px);
   display: flex;
   flex-flow: column;
 }
@@ -23,6 +23,7 @@
 
   display: flex;
   flex-flow: column;
+  justify-content: center;
 
   overflow: hidden;
 }

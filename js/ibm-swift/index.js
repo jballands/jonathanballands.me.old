@@ -4,5 +4,7 @@
  */
 
 import eyePoppingAnimation from './eyePoppingAnimation.js';
+import fluidRoadmapAnimation from './fluidRoadmapAnimation.js';
 
 eyePoppingAnimation();
+fluidRoadmapAnimation();

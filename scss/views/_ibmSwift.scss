@@ -43,22 +43,28 @@
   position: absolute;
   height: 390px;
 
-  left: 0;
+  left: 50px;
   top: calc(50% - 210px);
+
+  opacity: 0;
 }
 
 #ibmswift-macbook-2 {
   position: absolute;
   height: 420px;
 
-  left: 75px;
+  left: 135px;
   top: calc(50% - 230px);
+
+  opacity: 0;
 }
 
 #ibmswift-macbook-3 {
   position: absolute;
   height: 450px;
 
-  left: 175px;
+  left: 245px;
   top: calc(50% - 250px);
+
+  opacity: 0;
 }

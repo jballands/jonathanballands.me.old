@@ -19,7 +19,7 @@ export default function() {
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#ibm-swift-fluid-roadmap-trigger')) && !animHasTriggered) {
-      macbookOne.animate({ left: '0', opacity: 1 }, 1750, 'easeOutExpo', animateMacbookTwo);
+      macbookOne.animate({ left: '25px', opacity: 1 }, 1000, 'easeOutExpo', animateMacbookTwo);
       animHasTriggered = true;
     }
 
@@ -28,10 +28,11 @@ export default function() {
   // ---------------------------------------------------------------------------
 
   let animateMacbookTwo = () => {
-    macbookTwo.animate({ left: '75px', opacity: 1 }, 1750, 'easeOutExpo', animateMacbookThree);
+    macbookTwo.delay(500).animate({ left: '75px', opacity: 1 }, 1000, 'easeOutExpo', animateMacbookThree);
   };
 
   let animateMacbookThree = () => {
-    macbookThree.animate({ left: '175px', opacity: 1 }, 1750, 'easeOutExpo');
+    macbookThree.delay(500).animate({ left: '175px', opacity: 1 }, 1000, 'easeOutExpo');
   };
+  
 }

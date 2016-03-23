@@ -17,7 +17,7 @@ export default function() {
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#ibm-swift-eye-popping-trigger')) && !animHasTriggered) {
-      eyePoppingiPhone.animate({ top: '100px', opacity: 1 }, 2500, 'easeOutExpo');
+      eyePoppingiPhone.animate({ top: '100px', opacity: 1 }, 1250, 'easeOutExpo');
       animHasTriggered = true;
     }
 

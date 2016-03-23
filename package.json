@@ -41,6 +41,8 @@
     "loglevel": "~1.4.0"
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015"
+    ]
   }
 }

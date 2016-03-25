@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="125px" height="125px" viewBox="0 0 125 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Interest</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Interest">
+            <path d="M105.394519,95.2464792 L109.535236,95.2464792 C112.8474,95.2464792 115.538984,92.5598525 115.538984,89.2457305 L115.538984,53.0007487 C115.538984,49.6799677 112.851015,47 109.535236,47 L44.0037486,47 C40.6915848,47 38,49.6866267 38,53.0007487 L38,89.2457305 C38,92.5665116 40.6879698,95.2464792 44.0037486,95.2464792 L91.4157448,95.2464792 L105.394519,109.225253 L105.394519,95.2464792 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="3"></path>
+            <g id="Group" transform="translate(9.000000, 13.000000)" fill="#FFFFFF">
+                <rect id="Rectangle-21" x="0" y="0" width="90" height="56" rx="9"></rect>
+                <path d="M9.41210937,54.9580078 L9.41210938,72.8886719 L28.6373623,53.6634189 L9.41210937,54.9580078 Z" id="Path-163"></path>
+            </g>
+        </g>
+    </g>
+</svg>

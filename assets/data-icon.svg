@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="125px" height="125px" viewBox="0 0 125 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Data Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Data-Icon">
+            <g id="Group" transform="translate(4.000000, 6.000000)">
+                <ellipse id="Oval-14" fill="#FFFFFF" cx="55.8363636" cy="65.509434" rx="11.6" ry="11.6226415"></ellipse>
+                <polygon id="Triangle-1" fill="#FFFFFF" transform="translate(85.052557, 46.890062) rotate(-305.000000) translate(-85.052557, -46.890062) " points="84.0731177 7.89241271 89.8004967 80.5057357 78.3457386 80.5057357 "></polygon>
+                <path d="M107.478617,17.6946466 C104.874105,15.1764109 102.014495,12.8503808 98.9071092,10.7544228 C70.1781737,-8.62348891 31.1492072,-0.997528798 11.7334726,27.7874814 C-6.81790171,55.2910249 -0.751193608,92.1602431 24.8860387,112.29185 C3.9666933,95.6735573 -0.937772245,65.4490647 14.2842601,42.8814737 C30.2736886,19.1761711 62.4151904,12.8959687 86.0743138,28.8542489 C87.1433817,29.5753443 88.1768373,30.3295075 89.1742409,31.1144647 L107.478617,17.6946466 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -14,7 +14,7 @@
   position: absolute;
   height: 600px;
 
-  top: 0;
+  top: calc(50% - 280px);
   left: 100%;
 }
 
@@ -22,7 +22,7 @@
   position: absolute;
   height: 600px;
 
-  top: 0;
+  top: calc(50% - 280px);
   right: 100%;
 }
 
@@ -30,6 +30,6 @@
   position: absolute;
   height: 600px;
 
-  top: 0;
+  top: calc(50% - 280px);
   left: 100%;
 }

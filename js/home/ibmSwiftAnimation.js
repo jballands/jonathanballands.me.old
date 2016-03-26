@@ -17,8 +17,8 @@ export default function() {
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#ibm-hero-unit-trigger')) && !hasIBMUnitTriggered) {
-      ibmiPhone.animate({ top: '250px' }, 800, 'easeOutExpo');
-      ibmMacbook.animate({ left: '100px' }, 600, 'easeOutExpo');
+      ibmiPhone.animate({ top: '250px' }, 1000, 'easeOutExpo');
+      ibmMacbook.animate({ left: '100px' }, 800, 'easeOutExpo');
       hasIBMUnitTriggered = true;
     }
 

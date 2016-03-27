@@ -2,11 +2,20 @@
   background: $orange;
 }
 
-// ----------------------------------------------
+.somersault-liquid-bit-small {
+  @include liquid-bit(2.25);
+}
+
+.somersault-liquid-bit-big {
+  @include liquid-bit(6.75);
+}
+
+// -----------------------------------------------------------------------------
 
 #somersault-iphone-1 {
   position: absolute;
   width: 600px;
+  //height: 235px;
 
   top: 15px;
   left: 70px;
@@ -18,4 +27,64 @@
 
   top: 150px;
   left: 200px;
+}
+
+// -----------------------------------------------------------------------------
+
+#somersault-iphone-5 {
+  position: absolute;
+  width: 400px;
+
+  top: calc(50% - 200px);
+  right: 150px;
+}
+
+#somersault-iphone-4 {
+  position: absolute;
+  width: 400px;
+
+  top: calc(50% - 300px);
+  right: 0;
+}
+
+#somersault-iphone-7 {
+  position: absolute;
+  width: 400px;
+
+  top: calc(50% - 100px);
+  right: 300px;
+}
+
+#somersault-iphone-6 {
+  position: absolute;
+  width: 400px;
+
+  top: calc(50% - 370px);
+  right: 450px;
+}
+
+#somersault-iphone-8 {
+  position: absolute;
+  width: 400px;
+
+  top: calc(50% - 270px);
+  right: 605px;
+}
+
+#somersault-iphone-3 {
+  position: absolute;
+  width: 400px;
+
+  top: calc(50%);
+  right: 455px;
+}
+
+// -----------------------------------------------------------------------------
+
+#somersault-imac-1 {
+  position: absolute;
+  height: 600px;
+
+  top: calc(50% - 280px);
+  left: 150px;
 }

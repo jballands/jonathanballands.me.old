@@ -23,7 +23,7 @@ export default function () {
     'SXSW',
     'Redis',
     'Fluxxor',
-    'Tricky Golf Shots',
+    'NPM',
     'Handlebars',
     'Agile',
     'Austin, TX',

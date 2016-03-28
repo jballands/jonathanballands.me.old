@@ -4,7 +4,7 @@
  */
 
 import fitsInAnimation from './fitsInAnimation.js';
-//import fluidRoadmapAnimation from './fluidRoadmapAnimation.js';
+import powerfulAnimation from './powerfulAnimation.js';
 
 fitsInAnimation();
-//fluidRoadmapAnimation();
+powerfulAnimation();

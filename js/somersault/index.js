@@ -6,5 +6,7 @@
 import fitsInAnimation from './fitsInAnimation.js';
 import powerfulAnimation from './powerfulAnimation.js';
 
-fitsInAnimation();
-powerfulAnimation();
+$(document).ready(() => {
+  fitsInAnimation();
+  powerfulAnimation();
+});

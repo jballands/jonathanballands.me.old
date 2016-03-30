@@ -8,7 +8,9 @@ import codeiMacAnimation from '../resume/codeiMacAnimation.js';
 import designiMacAnimation from '../resume/designiMacAnimation.js';
 import mgmtiMacAnimation from '../resume/mgmtiMacAnimation.js';
 
-selfPromotionAnimation();
-codeiMacAnimation();
-designiMacAnimation();
-mgmtiMacAnimation();
+$(document).ready(() => {
+  selfPromotionAnimation();
+  codeiMacAnimation();
+  designiMacAnimation();
+  mgmtiMacAnimation();
+});

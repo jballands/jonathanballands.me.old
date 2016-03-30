@@ -19,14 +19,14 @@ export default function() {
   router.get('/ibm-swift', (req, res) => {
     res.render('ibm-swift', {
       layout: 'default',
-      title: 'IBM Swift - jonathanballands.me'
+      title: 'IBM Swift | jonathanballands.me'
     });
   });
 
   router.get('/somersault', (req, res) => {
     res.render('somersault', {
       layout: 'default',
-      title: 'Somersault - jonathanballands.me'
+      title: 'Somersault | jonathanballands.me'
     });
   });
 

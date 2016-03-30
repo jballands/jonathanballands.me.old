@@ -16,7 +16,7 @@
     background-image: url('austin_bridge_1440x1011.jpg');
   }
   /* Mobile */
-  @media (max-width: $mobileMax) {
+  @media (max-width: $tabletMax) {
     background-image:  url('austin_bridge_768x539.jpg');
   }
 }

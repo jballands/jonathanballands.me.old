@@ -28,7 +28,8 @@ export default function() {
 
   router.get('/resume', (req, res) => {
     res.render('resume', {
-      layout: 'default'
+      layout: 'default',
+      title: 'Résumé | jonathanballands.me'
     });
   });
 

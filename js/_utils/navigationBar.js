@@ -9,8 +9,10 @@
 export default function() {
 
   let hamburger = $('#hamburger');
+  let hamburgerMenu = $('#hamburger-menu');
 
   hamburger.click(() => {
     hamburger.toggleClass('open');
+    hamburgerMenu.toggleClass('open');
   });
 };

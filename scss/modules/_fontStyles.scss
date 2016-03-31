@@ -33,3 +33,23 @@ body {
   color: $white;
   text-decoration: none;
 }
+
+// -----------------------------------------------------------------------------
+// Phone
+// -----------------------------------------------------------------------------
+
+@media (max-width: $phoneMax) {
+
+  .title {
+    font-size: 28pt;
+  }
+
+  .header {
+    font-size: 16pt;
+  }
+
+  body {
+    font-size: 10pt;
+  }
+
+}

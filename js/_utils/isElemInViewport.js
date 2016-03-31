@@ -1,5 +1,5 @@
 /*
- *  /js/_modules/isElemInViewPort.js
+ *  /js/_utils/isElemInViewPort.js
  *  © 2016 Jonathan Ballands
  *
  *  http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport/7557433#7557433

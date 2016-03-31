@@ -21,9 +21,7 @@ $(document).ready(() => {
   //  and you are on the home page so the page won't technically reload
   //
   hbmWork.click(() => {
-    if (window.location.hash) {
-      hamburger.toggleClass('open');
-      hamburgerMenu.toggleClass('open');
-    }
+    hamburger.toggleClass('open');
+    hamburgerMenu.toggleClass('open');
   });
 });

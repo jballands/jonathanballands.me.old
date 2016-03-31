@@ -6,8 +6,7 @@
  *  http://codepen.io/g13nn/pen/eHGEF
  */
 
-export default function() {
-
+$(document).ready(() => {
   let hamburger = $('#hamburger');
   let hamburgerMenu = $('#hamburger-menu');
 
@@ -15,4 +14,4 @@ export default function() {
     hamburger.toggleClass('open');
     hamburgerMenu.toggleClass('open');
   });
-};
+});

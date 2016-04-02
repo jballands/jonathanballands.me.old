@@ -37,6 +37,8 @@
   background: $teal;
 
   #ibm-hero-unit-iphone {
+    content:url('/ibm-swift-iphone-sandbox.png');
+
     height: 425px;
     position: absolute;
     left: 45px;
@@ -47,6 +49,8 @@
   }
 
   #ibm-hero-unit-macbook {
+    content:url('/ibm-swift-macbook-catalog.png');
+
     height: 580px;
     position: absolute;
     top: 50px;
@@ -63,6 +67,8 @@
   background: $orange;
 
   #somersault-hero-unit-back {
+    content: url('/somersault-iphone-back.png');
+
     width: 275px;
 
     position: absolute;
@@ -74,6 +80,7 @@
   }
 
   #somersault-hero-unit-front {
+    content: url('/somersault-iphone-front.png');
     width: 275px;
 
     position: absolute;

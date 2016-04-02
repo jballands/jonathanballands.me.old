@@ -7,11 +7,8 @@
 
   z-index: 100;
 
-  @media (min-width: $desktopMin) {
-    background-image: url('austin_bridge_3142x2207.jpg');
-  }
-  @media (max-width: $laptopMax) and (min-width: $laptopMin) {
-    background-image: url('austin_bridge_1440x1011.jpg');
+  @media (max-width: $phoneMax) {
+    background-image: url('/austin_bridge_768x539.jpg');
   }
 }
 

@@ -1,0 +1,92 @@
+.homepage-hero-unit {
+  background-size: cover;
+  background-position: center center;
+
+  background-color: $backgroundImageTint;
+  background-blend-mode: multiply;
+
+  z-index: 100;
+
+  @media (min-width: $desktopMin) {
+    background-image: url('austin_bridge_3142x2207.jpg');
+  }
+  @media (max-width: $laptopMax) and (min-width: $laptopMin) {
+    background-image: url('austin_bridge_1440x1011.jpg');
+  }
+}
+
+.learn-more {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14pt;
+  letter-spacing: 0.5pt;
+
+  img {
+    margin-right: 15px;
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+.ibm-hero-unit {
+  background: $teal;
+
+  #ibm-hero-unit-iphone {
+    height: 425px;
+    position: absolute;
+    left: 45px;
+    z-index: 10;
+
+    // For jQuery animation
+    top: -100%;
+  }
+
+  #ibm-hero-unit-macbook {
+    height: 580px;
+    position: absolute;
+    top: 50px;
+    z-index: 9;
+
+    // For jQuery animation
+    left: 120%;
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+.somersault-hero-unit {
+  background: $orange;
+
+  #somersault-hero-unit-back {
+    width: 275px;
+
+    position: absolute;
+    right: 285px;
+    z-index: 9;
+
+    // For jQuery animation
+    top: 100%;
+  }
+
+  #somersault-hero-unit-front {
+    width: 275px;
+
+    position: absolute;
+    right: 100px;
+    z-index: 10;
+
+    // For jQuery animation
+    top: 100%;
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+.self-promotion-hero-unit {
+  background: $purple;
+}

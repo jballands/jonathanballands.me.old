@@ -1,0 +1,80 @@
+.ibm-swift {
+  background: $teal;
+}
+
+.ibm-swift-liquid-bit-small {
+  @include liquid-bit(2.25);
+}
+
+.ibm-swift-liquid-bit-big {
+  @include liquid-bit(6.75);
+}
+
+.ibm-swift-spacer {
+  padding-top: 70px;
+}
+
+// -----------------------------------------------------------------------------
+
+#ibmswift-imac-1 {
+  position: absolute;
+  height: 700px;
+
+  top: 0;
+  left: 200px;
+  //left: 100%;
+}
+
+// -----------------------------------------------------------------------------
+
+#ibmswift-iphone-1 {
+  position: absolute;
+  height: 400px;
+
+  right: 50px;
+  top: 40px;
+
+  opacity: 0;
+}
+
+// -----------------------------------------------------------------------------
+
+#ibmswift-macbook-1 {
+  position: absolute;
+  height: 370px;
+
+  left: 50px;
+  top: calc(50% - 210px);
+
+  opacity: 0;
+}
+
+#ibmswift-macbook-2 {
+  position: absolute;
+  height: 415px;
+
+  left: 135px;
+  top: calc(50% - 235px);
+
+  opacity: 0;
+}
+
+#ibmswift-macbook-3 {
+  position: absolute;
+  height: 460px;
+
+  left: 245px;
+  top: calc(50% - 255px);
+
+  opacity: 0;
+}
+
+// -----------------------------------------------------------------------------
+
+#apple-insider {
+  height: 100px;
+}
+
+#nasdaq {
+  height: 100px;
+}

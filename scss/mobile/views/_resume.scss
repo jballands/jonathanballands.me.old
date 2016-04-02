@@ -1,0 +1,35 @@
+.resume {
+  background: $darkPurple;
+}
+
+.resume-liquid-bit-small {
+  @include liquid-bit(2.25);
+}
+
+.resume-liquid-bit-big {
+  @include liquid-bit(6.75);
+}
+
+#code-imac {
+  position: absolute;
+  height: 600px;
+
+  top: calc(50% - 280px);
+  left: 125%;
+}
+
+#design-imac {
+  position: absolute;
+  height: 600px;
+
+  top: calc(50% - 280px);
+  right: 125%;
+}
+
+#mgmt-imac {
+  position: absolute;
+  height: 600px;
+
+  top: calc(50% - 280px);
+  left: 125%;
+}

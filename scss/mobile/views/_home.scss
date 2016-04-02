@@ -33,6 +33,20 @@
 .ibm-hero-unit {
   background: $teal;
 
+  .hero-unit-container {
+    flex-flow: column-reverse;
+  }
+
+  .hero-unit-bit {
+    flex: 1 0 50%;
+    width: 100%;
+    padding: 0;
+  }
+
+  #ibm-hero-unit-images {
+    height: 284px;
+  }
+
   #ibm-hero-unit-iphone {
     height: 425px;
     position: absolute;

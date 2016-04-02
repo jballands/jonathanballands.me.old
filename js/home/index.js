@@ -3,10 +3,12 @@
  *  © 2016 Jonathan Ballands
  */
 
-import ibmSwiftAnimation from './ibmSwiftAnimation.js';
-import somersaultAnimation from './somersaultAnimation.js';
-import selfPromotionAnimation from './selfPromotionAnimation.js';
+import {LAPTOP_MIN, TABLET_MAX, TABLET_MIN, MOBILE_MAX} from '../_utils/constants.js';
 
-ibmSwiftAnimation();
-somersaultAnimation();
-selfPromotionAnimation();
+// -----------------------------------------------------------------------------
+
+import desktop from './desktop/index.js';
+
+if (document.documentElement.clientWidth >= LAPTOP_MIN) {
+  desktop();
+}

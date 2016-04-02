@@ -1,5 +1,5 @@
 /*
- *  /js/home/resumeAnimation.js
+ *  /js/home/desktop/resumeAnimation.js
  *  © 2016 Jonathan Ballands
  */
 
@@ -11,6 +11,7 @@ export default function () {
     'Sketch',
     'React.js',
     'Express',
+    'Photoshop',
     'Core Data',
     'Poached Eggs',
     'Scrum Mastering',
@@ -29,6 +30,7 @@ export default function () {
     'Austin, TX',
     'MongoDB',
     'SAAS',
+    'Illustrator',
     'A lot of stuff'
   ];
 

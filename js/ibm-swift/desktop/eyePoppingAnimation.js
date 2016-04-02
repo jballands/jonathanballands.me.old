@@ -1,9 +1,9 @@
 /*
- *  /js/ibm-swift/eyePoppingAnimation.js
+ *  /js/ibm-swift/desktop/eyePoppingAnimation.js
  *  © 2016 Jonathan Ballands
  */
 
-import isElemInViewport from '../_utils/isElemInViewport.js';
+import isElemInViewport from '../../_utils/isElemInViewport.js';
 
 export default function() {
 

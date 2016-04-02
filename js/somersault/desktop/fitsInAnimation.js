@@ -3,7 +3,7 @@
  *  © 2016 Jonathan Ballands
  */
 
-import isElemInViewport from '../_utils/isElemInViewport.js';
+import isElemInViewport from '../../_utils/isElemInViewport.js';
 
 export default function() {
 

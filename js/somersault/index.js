@@ -3,8 +3,12 @@
  *  © 2016 Jonathan Ballands
  */
 
-import fitsInAnimation from './fitsInAnimation.js';
-import powerfulAnimation from './powerfulAnimation.js';
+import {LAPTOP_MIN, TABLET_MAX, TABLET_MIN, MOBILE_MAX} from '../_utils/constants.js';
 
-fitsInAnimation();
-powerfulAnimation();
+// -----------------------------------------------------------------------------
+
+import desktop from './desktop/index.js';
+
+if (document.documentElement.clientWidth >= LAPTOP_MIN) {
+  desktop();
+}

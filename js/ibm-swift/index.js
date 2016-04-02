@@ -3,8 +3,12 @@
  *  © 2016 Jonathan Ballands
  */
 
-import eyePoppingAnimation from './eyePoppingAnimation.js';
-import fluidRoadmapAnimation from './fluidRoadmapAnimation.js';
+import {LAPTOP_MIN, TABLET_MAX, TABLET_MIN, MOBILE_MAX} from '../_utils/constants.js';
 
-eyePoppingAnimation();
-fluidRoadmapAnimation();
+// -----------------------------------------------------------------------------
+
+import desktop from './desktop/index.js';
+
+if (document.documentElement.clientWidth >= LAPTOP_MIN) {
+  desktop();
+}

@@ -3,12 +3,12 @@
  *  © 2016 Jonathan Ballands
  */
 
-import selfPromotionAnimation from '../home/selfPromotionAnimation.js';
-import codeiMacAnimation from '../resume/codeiMacAnimation.js';
-import designiMacAnimation from '../resume/designiMacAnimation.js';
-import mgmtiMacAnimation from '../resume/mgmtiMacAnimation.js';
+import {LAPTOP_MIN, TABLET_MAX, TABLET_MIN, MOBILE_MAX} from '../_utils/constants.js';
 
-selfPromotionAnimation();
-codeiMacAnimation();
-designiMacAnimation();
-mgmtiMacAnimation();
+// -----------------------------------------------------------------------------
+
+import desktop from './desktop/index.js';
+
+if (document.documentElement.clientWidth >= LAPTOP_MIN) {
+  desktop();
+}

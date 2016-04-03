@@ -10,19 +10,32 @@
   @include liquid-bit(6.75);
 }
 
+// -----------------------------------------------------------------------------
+
+#ibm-swift-page-hero-unit {
+  height: 750px;
+
+  .images{
+    height: 350px;
+  }
+}
+
 .ibm-swift-spacer {
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 // -----------------------------------------------------------------------------
 
 #ibmswift-imac-1 {
   position: absolute;
-  height: 700px;
+  width: 300px;
 
   top: 0;
-  left: 200px;
+  //left: 200px;
+  left: calc(50% - 150px);
   //left: 100%;
+
+  content: url('/ibmswift-imac-1-mobile.png');
 }
 
 // -----------------------------------------------------------------------------

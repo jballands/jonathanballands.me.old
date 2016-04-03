@@ -10,6 +10,14 @@
   @media (max-width: $mobileMax) {
     background-image: url('/austin_bridge_768x539.jpg');
   }
+
+  .hero-unit-bit:first-child {
+    padding-top: 50px;
+  }
+
+  .hero-unit-bit:last-child {
+    padding-bottom: 50px;
+  }
 }
 
 .learn-more {
@@ -37,12 +45,6 @@
 
   .hero-unit-container {
     flex-flow: column-reverse;
-  }
-
-  .hero-unit-bit {
-    flex: 1 1;
-    width: 100%;
-    padding: 0;
   }
 
   #ibm-hero-unit-images {
@@ -85,12 +87,6 @@
 
   .hero-unit-container {
     flex-flow: column-reverse;
-  }
-
-  .hero-unit-bit {
-    flex: 1 1;
-    width: 100%;
-    padding: 0;
   }
 
   #somersault-hero-unit-images {

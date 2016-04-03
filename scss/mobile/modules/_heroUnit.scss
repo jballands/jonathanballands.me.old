@@ -17,7 +17,7 @@
 
 .hero-unit-container {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 
@@ -28,15 +28,8 @@
 
 .hero-unit-bit {
   flex: 1 1;
+  width: 100%;
   padding: 0;
-
-  &:first-child {
-    padding-top: 50px;
-  }
-
-  &:last-child {
-    padding-bottom: 50px;
-  }
 
   position: relative;
 

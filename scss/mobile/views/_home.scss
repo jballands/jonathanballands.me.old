@@ -47,7 +47,6 @@
 
   #ibm-hero-unit-images {
     height: 284px;
-    //padding-top: 50px;
   }
 
   #ibm-hero-unit-text {
@@ -84,26 +83,46 @@
 .somersault-hero-unit {
   background: $orange;
 
+  .hero-unit-container {
+    flex-flow: column-reverse;
+  }
+
+  .hero-unit-bit {
+    flex: 1 1;
+    width: 100%;
+    padding: 0;
+  }
+
+  #somersault-hero-unit-images {
+    height: 160px;
+  }
+
   #somersault-hero-unit-back {
-    width: 275px;
+    content: url('/somersault-iphone-back-mobile.png');
+
+    width: 140px;
 
     position: absolute;
-    right: 285px;
+    right: calc(50% - 65px + 45px);
     z-index: 9;
 
     // For jQuery animation
-    top: 100%;
+    top: 0;
+    //top: 100%;
   }
 
   #somersault-hero-unit-front {
-    width: 275px;
+    content: url('/somersault-iphone-front-mobile.png');
+
+    width: 140px;
 
     position: absolute;
-    right: 100px;
+    right: calc(50% - 65px - 45px);
     z-index: 10;
 
     // For jQuery animation
-    top: 100%;
+    //top: 100%;
+    top: 0;
   }
 }
 

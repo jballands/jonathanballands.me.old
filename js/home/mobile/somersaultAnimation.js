@@ -17,11 +17,11 @@ export default function() {
 
   $(window).on('scroll', () => {
 
-    if (isElemInViewport($('#somersault-hero-unit-trigger')) && !hasSomersaultUnitTriggered) {
-      somersaultBackPhone.animate({ top: '100px' }, 800, 'easeOutExpo', somersaultBackPhoneDriftDown);
-      somersaultFrontPhone.animate({ top: '100px' }, 1200, 'easeOutExpo', somersaultFrontPhoneDriftDown);
-      hasSomersaultUnitTriggered = true;
-    }
+    // if (isElemInViewport($('#somersault-hero-unit-trigger')) && !hasSomersaultUnitTriggered) {
+    //   somersaultBackPhone.animate({ top: '100px' }, 800, 'easeOutExpo', somersaultBackPhoneDriftDown);
+    //   somersaultFrontPhone.animate({ top: '100px' }, 1200, 'easeOutExpo', somersaultFrontPhoneDriftDown);
+    //   hasSomersaultUnitTriggered = true;
+    // }
 
   });
 

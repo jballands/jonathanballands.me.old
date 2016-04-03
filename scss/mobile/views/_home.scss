@@ -40,13 +40,18 @@
   }
 
   .hero-unit-bit {
-    flex: 1 0 50%;
+    flex: 1 1;
     width: 100%;
     padding: 0;
   }
 
   #ibm-hero-unit-images {
     height: 284px;
+    //padding-top: 50px;
+  }
+
+  #ibm-hero-unit-text {
+    padding-bottom: 50px;
   }
 
   #ibm-hero-unit-iphone {

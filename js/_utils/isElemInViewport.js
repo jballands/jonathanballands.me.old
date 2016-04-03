@@ -13,13 +13,13 @@ export default function(el) {
 
   let rect = el.getBoundingClientRect();
 
-  // Modification: Trigger at the halfway point
-  const ONE_THIRD = (rect.bottom - rect.top) / 3;
+  const PIECE = (document.documentElement.clientHeight > 440) ?
+    (rect.bottom - rect.top) / 3 : (rect.bottom - rect.top) / 4;
 
   const TOP_BIT = (rect.top >= 0) &&
-    ((rect.bottom - ONE_THIRD) <= (window.innerHeight || document.documentElement.clientHeight));
-  const BOTTOM_BIT = ((rect.top + ONE_THIRD) >= 0) &&
-    (rect.bottom <= (window.innerHeight || document.documentElement.clientHeight));
+    ((rect.top + PIECE) <= (document.documentElement.clientHeight));
+  const BOTTOM_BIT = ((rect.bottom - PIECE) >= 0) &&
+    (rect.bottom <= (document.documentElement.clientHeight));
 
   return (TOP_BIT || BOTTOM_BIT);
 }

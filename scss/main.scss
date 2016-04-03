@@ -23,7 +23,7 @@
 }
 
 @media (max-width: $tabletMax) and (min-width: $tabletMin) {
-
+  @import 'tablet/tablet';
 }
 
 @media (max-width: $phoneMax) {

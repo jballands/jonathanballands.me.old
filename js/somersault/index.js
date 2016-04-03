@@ -3,7 +3,7 @@
  *  © 2016 Jonathan Ballands
  */
 
-import {LAPTOP_MIN, TABLET_MAX, TABLET_MIN, MOBILE_MAX} from '../_utils/constants.js';
+import {LAPTOP_MIN, MOBILE_MAX} from '../_utils/constants.js';
 
 // -----------------------------------------------------------------------------
 

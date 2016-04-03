@@ -12,9 +12,10 @@ export default function(el) {
   }
 
   let rect = el.getBoundingClientRect();
+  const RECT_HEIGHT = rect.bottom - rect.top;
 
-  const PIECE = (document.documentElement.clientHeight > 440) ?
-    (rect.bottom - rect.top) / 3 : (rect.bottom - rect.top) / 4;
+  const PIECE = (document.documentElement.clientHeight < RECT_HEIGHT / 3) ?
+    RECT_HEIGHT / 4 : RECT_HEIGHT / 3;
 
   const TOP_BIT = (rect.top >= 0) &&
     ((rect.top + PIECE) <= (document.documentElement.clientHeight));

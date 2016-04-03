@@ -7,7 +7,7 @@
 
   z-index: 100;
 
-  @media (max-width: $phoneMax) {
+  @media (max-width: $mobileMax) {
     background-image: url('/austin_bridge_768x539.jpg');
   }
 }
@@ -74,7 +74,7 @@
     z-index: 9;
 
     // For jQuery animation
-    left: 120%;
+    left: 150%;
   }
 }
 

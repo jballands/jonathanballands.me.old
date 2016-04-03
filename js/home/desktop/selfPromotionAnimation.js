@@ -13,8 +13,6 @@ export default function () {
     'Express',
     'Photoshop',
     'Core Data',
-    'Poached Eggs',
-    'Scrum Mastering',
     'Redux',
     'Agile',
     'Unix',
@@ -24,14 +22,14 @@ export default function () {
     'SXSW',
     'Redis',
     'Fluxxor',
+    'Scrum',
     'NPM',
     'Handlebars',
     'Agile',
     'Austin, TX',
     'MongoDB',
     'SAAS',
-    'Illustrator',
-    'A lot of stuff'
+    'Illustrator'
   ];
 
   $('#self-promotion-tty').typed({

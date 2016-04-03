@@ -3,12 +3,13 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
+
+  margin: 0 10px;
 }
 
 .hello-my-name-is-salutation {
   font-family: 'Yellowtail', cursive;
-  font-size: 40pt;
-  padding-right: 275px;
+  font-size: 24pt;
 }
 
 .hello-my-name-is-typing {
@@ -19,12 +20,10 @@
   align-items: center;
 
   height: 1em;
-  padding-right: 100px;
 }
 
 .hello-my-name-is-description {
-  max-width: 600px;
-  padding-left: 275px;
+  text-align: center;
   margin-top: 10px;
 }
 

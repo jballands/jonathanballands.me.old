@@ -17,29 +17,29 @@ export default function() {
 
   $(window).on('scroll', () => {
 
-    // if (isElemInViewport($('#somersault-hero-unit-trigger')) && !hasSomersaultUnitTriggered) {
-    //   somersaultBackPhone.animate({ top: '100px' }, 800, 'easeOutExpo', somersaultBackPhoneDriftDown);
-    //   somersaultFrontPhone.animate({ top: '100px' }, 1200, 'easeOutExpo', somersaultFrontPhoneDriftDown);
-    //   hasSomersaultUnitTriggered = true;
-    // }
+    if (isElemInViewport($('#somersault-hero-unit-trigger')) && !hasSomersaultUnitTriggered) {
+      somersaultBackPhone.animate({ top: '0px' }, 800, 'easeOutExpo', somersaultBackPhoneDriftDown);
+      somersaultFrontPhone.animate({ top: '0px' }, 1200, 'easeOutExpo', somersaultFrontPhoneDriftDown);
+      hasSomersaultUnitTriggered = true;
+    }
 
   });
 
   // ---------------------------------------------------------------------------
 
   let somersaultFrontPhoneDriftDown = () => {
-    somersaultFrontPhone.animate({ top: '130px' }, 3000, 'easeInOutSine', somersaultFrontPhoneDriftUp);
+    somersaultFrontPhone.animate({ top: '15px' }, 3000, 'easeInOutSine', somersaultFrontPhoneDriftUp);
   };
 
   let somersaultFrontPhoneDriftUp = () => {
-    somersaultFrontPhone.animate({ top: '100px' }, 3000, 'easeInOutSine', somersaultFrontPhoneDriftDown);
+    somersaultFrontPhone.animate({ top: '0px' }, 3000, 'easeInOutSine', somersaultFrontPhoneDriftDown);
   }
 
   let somersaultBackPhoneDriftDown = () => {
-    somersaultBackPhone.animate({ top: '130px' }, 3000, 'easeInOutSine', somersaultBackPhoneDriftUp);
+    somersaultBackPhone.animate({ top: '15px' }, 3000, 'easeInOutSine', somersaultBackPhoneDriftUp);
   };
 
   let somersaultBackPhoneDriftUp = () => {
-    somersaultBackPhone.animate({ top: '100px' }, 3000, 'easeInOutSine', somersaultBackPhoneDriftDown);
+    somersaultBackPhone.animate({ top: '0px' }, 3000, 'easeInOutSine', somersaultBackPhoneDriftDown);
   }
 }

@@ -48,9 +48,11 @@
   }
 
   #ibm-hero-unit-iphone {
-    height: 425px;
+    content:url('/ibm-swift-iphone-sandbox-mobile.png');
+
+    height: 152px;
     position: absolute;
-    left: 45px;
+    left: 0;
     z-index: 10;
 
     // For jQuery animation
@@ -58,7 +60,9 @@
   }
 
   #ibm-hero-unit-macbook {
-    height: 580px;
+    content:url('/ibm-swift-macbook-catalog-mobile.png');
+
+    height: 215px;
     position: absolute;
     top: 50px;
     z-index: 9;

@@ -2,14 +2,6 @@
   background: $orange;
 }
 
-.somersault-liquid-bit-small {
-  @include liquid-bit(2.25);
-}
-
-.somersault-liquid-bit-big {
-  @include liquid-bit(6.75);
-}
-
 // -----------------------------------------------------------------------------
 
 #somersault-page-hero-unit {

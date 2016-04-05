@@ -63,15 +63,6 @@
     max-width: 150px;
     max-height: 150px;
   }
-
-  &.hover-up {
-    transition: all .2s ease-out;
-
-    &:hover {
-      transform: translateY(-5px);
-      transition: all .2s ease-out;
-    }
-  }
 }
 
 .sidekick-unit-bit {

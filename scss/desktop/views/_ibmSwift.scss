@@ -2,14 +2,6 @@
   background: $teal;
 }
 
-.ibm-swift-liquid-bit-small {
-  @include liquid-bit(2.25);
-}
-
-.ibm-swift-liquid-bit-big {
-  @include liquid-bit(6.75);
-}
-
 .ibm-swift-spacer {
   padding-top: 70px;
 }
@@ -22,7 +14,6 @@
 
   top: 0;
   left: 200px;
-  //left: 100%;
 
   content: url('/ibmswift-imac-1-desktop.png');
 }

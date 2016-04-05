@@ -2,6 +2,10 @@
   background: $orange;
 }
 
+.somersault-spacer {
+  padding-top: 70px;
+}
+
 .somersault-liquid-bit-small {
   @include liquid-bit(2.25);
 }
@@ -12,21 +16,30 @@
 
 // -----------------------------------------------------------------------------
 
+#somersault-page-hero-unit {
+  height: auto;
+  display: block;
+
+  .images {
+    height: 545px;
+  }
+}
+
 #somersault-iphone-1 {
   position: absolute;
-  width: 600px;
+  width: 376px;
   //height: 235px;
 
-  top: 15px;
-  left: 70px;
+  top: 45px;
+  left: calc(50% - 188px);
 }
 
 #somersault-iphone-2 {
   position: absolute;
-  width: 400px;
+  width: 266px;
 
-  top: 150px;
-  left: 200px;
+  top: 130px;
+  left: calc(50% - 133px);
 }
 
 // -----------------------------------------------------------------------------

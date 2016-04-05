@@ -22,8 +22,6 @@ export default function(el) {
     return (RECT_HEIGHT - 75) / divisor;
   })();
 
-  console.log(PIECE);
-
   const TOP_BIT = (rect.top >= 0) &&
     ((rect.top + PIECE) <= (document.documentElement.clientHeight));
   const BOTTOM_BIT = ((rect.bottom - PIECE) >= 0) &&

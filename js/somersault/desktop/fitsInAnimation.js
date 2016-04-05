@@ -22,7 +22,7 @@ export default function() {
   $(window).on('scroll', () => {
 
     // 338px is 50% of the parent container, 30px displacement
-    if (isElemInViewport($('#somersault-fits-in-trigger')) && !animHasTriggered) {
+    if (isElemInViewport($('#somersault-fits-in')) && !animHasTriggered) {
       iPhone5.animate({ top: '138px', opacity: 1 }, 2000, 'easeOutExpo');
       iPhone7.delay(300).animate({ top: '238px', opacity: 1 }, 2000, 'easeOutExpo');
       iPhone6.delay(225).animate({ top: '-38px', opacity: 1 }, 2000, 'easeOutExpo');

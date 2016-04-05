@@ -13,10 +13,11 @@
 // -----------------------------------------------------------------------------
 
 #ibm-swift-page-hero-unit {
-  height: 750px;
+  height: auto;
+  display: block;
 
   .images{
-    height: 350px;
+    height: 403px;
   }
 }
 
@@ -30,10 +31,8 @@
   position: absolute;
   width: 300px;
 
-  top: 0;
-  //left: 200px;
+  top: 30px;
   left: calc(50% - 150px);
-  //left: 100%;
 
   content: url('/ibmswift-imac-1-mobile.png');
 }

@@ -1,6 +1,6 @@
 .sidekick-unit {
   width: 100%;
-  padding: 75px 0;
+  padding-top: 75px;
 
   display: flex;
   flex-flow: column;
@@ -19,7 +19,7 @@
   justify-content: center;
   align-items: center;
 
-  overflow: hidden;
+  max-width: $iPhone6PlusWidth;
 
   margin: 0 10px;
 }

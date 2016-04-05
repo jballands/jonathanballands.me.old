@@ -44,7 +44,7 @@
   flex-flow: column-reverse;
 
   .images {
-    margin-top: 25px;
+    margin-top: 10px;
     height: 207px;
   }
 }
@@ -63,34 +63,47 @@
 
 // -----------------------------------------------------------------------------
 
+#ibm-swift-fluid-roadmap {
+  .images {
+    margin-top: 25px;
+    height: 260px;
+  }
+}
+
 #ibmswift-macbook-1 {
   position: absolute;
-  height: 370px;
+  height: 197px;
 
   left: 50px;
-  top: calc(50% - 210px);
+  top: 52px - 25px;
 
   opacity: 0;
+
+  content: url('/ibmswift-macbook-1-mobile.png');
 }
 
 #ibmswift-macbook-2 {
   position: absolute;
-  height: 415px;
+  height: 220px;
 
   left: 135px;
-  top: calc(50% - 235px);
+  top: 25px - 14px;
 
   opacity: 0;
+
+  content: url('/ibmswift-macbook-2-mobile.png');
 }
 
 #ibmswift-macbook-3 {
   position: absolute;
-  height: 460px;
+  height: 245px;
 
   left: 245px;
-  top: calc(50% - 255px);
+  top: 0;
 
   opacity: 0;
+
+  content: url('/ibmswift-macbook-3-mobile.png');
 }
 
 // -----------------------------------------------------------------------------

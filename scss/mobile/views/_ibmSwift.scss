@@ -40,14 +40,25 @@
 
 // -----------------------------------------------------------------------------
 
+#ibm-swift-eye-popping {
+  flex-flow: column-reverse;
+
+  .images {
+    margin-top: 25px;
+    height: 207px;
+  }
+}
+
 #ibmswift-iphone-1 {
   position: absolute;
-  height: 400px;
 
-  right: 50px;
-  top: 40px;
+  top: 0;
+  left: calc(50% - 150px);
+  width: 300px;
 
   opacity: 0;
+
+  content: url('/ibmswift-iphone-1-mobile.png');
 }
 
 // -----------------------------------------------------------------------------

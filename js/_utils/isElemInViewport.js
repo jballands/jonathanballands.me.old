@@ -16,10 +16,10 @@ export default function(el) {
 
   const PIECE = (() => {
     let divisor = 1;
-    while (document.documentElement.clientHeight < RECT_HEIGHT / divisor) {
+    while (document.documentElement.clientHeight < (RECT_HEIGHT - 30) / divisor) {
       divisor++;
     }
-    return RECT_HEIGHT / divisor;
+    return (RECT_HEIGHT - 75) / divisor;
   })();
 
   console.log(PIECE);

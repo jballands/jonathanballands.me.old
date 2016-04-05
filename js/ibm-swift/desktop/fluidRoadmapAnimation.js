@@ -18,7 +18,7 @@ export default function() {
 
   $(window).on('scroll', () => {
 
-    if (isElemInViewport($('#ibm-swift-fluid-roadmap-trigger')) && !animHasTriggered) {
+    if (isElemInViewport($('#ibm-swift-fluid-roadmap')) && !animHasTriggered) {
       macbookOne.animate({ left: '25px', opacity: 1 }, 1000, 'easeOutExpo', animateMacbookTwo);
       animHasTriggered = true;
     }

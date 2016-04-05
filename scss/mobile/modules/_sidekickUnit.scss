@@ -1,6 +1,6 @@
 .sidekick-unit {
-  width: 100%;
-  padding-top: 75px;
+  width: calc(100% - 20px);
+  padding: 55px 10px 15px 10px;
 
   display: flex;
   flex-flow: column;
@@ -11,6 +11,8 @@
 
   color: $white;
   text-decoration: none;
+
+  text-align: center;
 }
 
 .sidekick-unit-container {
@@ -20,49 +22,49 @@
   align-items: center;
 
   max-width: $iPhone6PlusWidth;
-
-  margin: 0 10px;
 }
 
 .sidekick-unit-columns-container {
   display: flex;
-  flex-flow: row no-wrap;
+  flex-flow: column;
   justify-content: space-between;
 
-  margin-top: 50px;
+  margin-top: 25px;
 
-  width: 960px;
+  max-width: $iPhone6PlusWidth;
 }
 
 .sidekick-unit-column {
-  flex: 0 1 320px;
-  padding: 0 15px;
+  flex: 0 1;
+  width: 250px;
 
   position: relative;
-  height: 100%;
 
   display: flex;
   flex-flow: column;
   align-items: center;
 
   text-align: center;
-}
 
-.sidekick-unit-column-header {
-  margin-top: 15px;
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .sidekick-unit-column-icon {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   img {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 100px;
+    max-height: 100px;
   }
 
   &.hover-up {
@@ -86,4 +88,8 @@
   justify-content: center;
 
   text-align: center;
+}
+
+.lets-chat {
+  margin-top: 25px;
 }

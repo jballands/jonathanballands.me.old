@@ -15,10 +15,10 @@ export default function() {
 
   $(window).on('scroll', () => {
 
-    if (isElemInViewport($('#design-liquid-bit')) && !hasDesigniMacTriggered) {
-      designiMac.animate({ right: '150px' }, 600, 'easeOutExpo');
-      hasDesigniMacTriggered = true;
-    }
+    // if (isElemInViewport($('#design-liquid-bit')) && !hasDesigniMacTriggered) {
+    //   designiMac.animate({ left: '150px' }, 600, 'easeOutExpo');
+    //   hasDesigniMacTriggered = true;
+    // }
 
   });
 }

@@ -10,13 +10,23 @@
   @include liquid-bit(6.75);
 }
 
+// -----------------------------------------------------------------------------
+
+#code-liquid-bit {
+  height: 600px;
+}
+
 #code-imac {
   position: absolute;
   height: 600px;
 
   top: calc(50% - 280px);
   left: 125%;
+
+  content: url('/code-imac-desktop.png');
 }
+
+// -----------------------------------------------------------------------------
 
 #design-imac {
   position: absolute;
@@ -24,7 +34,11 @@
 
   top: calc(50% - 280px);
   right: 150%;
+
+  content: url('/design-imac-desktop.png');
 }
+
+// -----------------------------------------------------------------------------
 
 #mgmt-imac {
   position: absolute;
@@ -32,4 +46,6 @@
 
   top: calc(50% - 280px);
   left: 125%;
+
+  content: url('/mgmt-imac-desktop.png');
 }

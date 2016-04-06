@@ -13,8 +13,6 @@
   text-decoration: none;
 
   text-align: center;
-
-  max-width: $iPhone6PlusWidth;
 }
 
 .sidekick-unit-container {
@@ -23,6 +21,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: $iPhone6PlusWidth;
 }
 
 .sidekick-unit-columns-container {

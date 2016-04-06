@@ -18,7 +18,6 @@
 
 #somersault-page-hero-unit {
   height: auto;
-  display: block;
 
   .images {
     height: 545px;
@@ -32,6 +31,8 @@
 
   top: 45px;
   left: calc(50% - 188px);
+
+  content: url('/somersault-iphone-1-mobile.png');
 }
 
 #somersault-iphone-2 {
@@ -40,68 +41,90 @@
 
   top: 130px;
   left: calc(50% - 133px);
+
+  content: url('/somersault-iphone-2-mobile.png');
 }
 
 // -----------------------------------------------------------------------------
 
+#somersault-fits-in {
+  flex-flow: column-reverse;
+
+  .images {
+    height: 500px;
+  }
+}
+
 #somersault-iphone-5 {
   position: absolute;
-  width: 400px;
+  width: 200px;
 
-  top: 98px;
-  right: 150px;
+  top: 88px;
+  right: 187px - 99px;
 
   opacity: 0;
+
+  content: url('/somersault-iphone-5-mobile.png');
 }
 
 #somersault-iphone-4 {
   position: absolute;
-  width: 400px;
+  width: 200px;
 
-  top: -2px;
-  right: 0;
+  top: 40px;
+  right: 187px - 173px;
 
   opacity: 0;
+
+  content: url('/somersault-iphone-4-mobile.png');
 }
 
 #somersault-iphone-7 {
   position: absolute;
-  width: 400px;
+  width: 200px;
 
-  top: 198px;
-  right: 300px;
+  top: 137px;
+  right: 187px - 26px;
 
   opacity: 0;
+
+  content: url('/somersault-iphone-7-mobile.png');
 }
 
 #somersault-iphone-6 {
   position: absolute;
-  width: 400px;
+  width: 200px;
 
-  top: -78px;
-  right: 450px;
+  top: 151px;
+  right: 187px - 283px;
 
   opacity: 0;
+
+  content: url('/somersault-iphone-6-mobile.png');
 }
 
 #somersault-iphone-8 {
   position: absolute;
-  width: 400px;
+  width: 200px;
 
-  top: 28px;
-  right: 605px;
+  top: 201px;
+  right: 187px - 207px;
 
   opacity: 0;
+
+  content: url('/somersault-iphone-8-mobile.png');
 }
 
 #somersault-iphone-3 {
   position: absolute;
-  width: 400px;
+  width: 200px;
 
-  top: 298px;
-  right: 455px;
+  top: 26px;
+  right: 187px + 85px;
 
   opacity: 0;
+
+  content: url('/somersault-iphone-3-mobile.png');
 }
 
 // -----------------------------------------------------------------------------

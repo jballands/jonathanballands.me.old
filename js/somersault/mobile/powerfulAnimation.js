@@ -1,5 +1,5 @@
 /*
- *  /js/somersault/desktop/powerfulAnimation.js
+ *  /js/somersault/mobile/powerfulAnimation.js
  *  © 2016 Jonathan Ballands
  */
 

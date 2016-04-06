@@ -1,14 +1,17 @@
 .hero-unit {
-  width: 100%;
+  width: calc(100% - 20px);
   height: 568px;
 
   display: flex;
+  align-items: center;
   justify-content: center;
 
   position: relative;
 
   color: $white;
   text-decoration: none;
+
+  padding: 0 10px;
 
   &.no-overflow {
     overflow: hidden;
@@ -22,8 +25,6 @@
   align-items: center;
 
   max-width: $iPhone6PlusWidth;
-
-  margin: 0 10px;
 }
 
 .hero-unit-bit {

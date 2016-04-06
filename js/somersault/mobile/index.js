@@ -1,5 +1,5 @@
 /*
- *  /js/somersault/desktop/index.js
+ *  /js/somersault/mobile/index.js
  *  © 2016 Jonathan Ballands
  */
 

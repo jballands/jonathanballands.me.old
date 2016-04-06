@@ -1,5 +1,5 @@
 /*
- *  /js/somersault/desktop/fitsInAnimation.js
+ *  /js/somersault/mobile/fitsInAnimation.js
  *  © 2016 Jonathan Ballands
  */
 
@@ -23,12 +23,12 @@ export default function() {
 
     // 338px is 50% of the parent container, 30px displacement
     if (isElemInViewport($('#somersault-fits-in')) && !animHasTriggered) {
-      iPhone5.animate({ top: '138px', opacity: 1 }, 2000, 'easeOutExpo');
-      iPhone7.delay(300).animate({ top: '238px', opacity: 1 }, 2000, 'easeOutExpo');
-      iPhone6.delay(225).animate({ top: '-38px', opacity: 1 }, 2000, 'easeOutExpo');
-      iPhone3.delay(75).animate({ top: '338px', opacity: 1 }, 2000, 'easeOutExpo');
-      iPhone4.delay(375).animate({ top: '38px', opacity: 1 }, 2000, 'easeOutExpo');
-      iPhone8.delay(150).animate({ top: '68px', opacity: 1 }, 2000, 'easeOutExpo');
+      iPhone5.animate({ top: '98px', opacity: 1 }, 2000, 'easeOutExpo');
+      iPhone7.delay(300).animate({ top: '147px', opacity: 1 }, 2000, 'easeOutExpo');
+      iPhone6.delay(225).animate({ top: '161px', opacity: 1 }, 2000, 'easeOutExpo');
+      iPhone3.delay(75).animate({ top: '36px', opacity: 1 }, 2000, 'easeOutExpo');
+      iPhone4.delay(375).animate({ top: '50px', opacity: 1 }, 2000, 'easeOutExpo');
+      iPhone8.delay(150).animate({ top: '221px', opacity: 1 }, 2000, 'easeOutExpo');
 
       animHasTriggered = true;
     }

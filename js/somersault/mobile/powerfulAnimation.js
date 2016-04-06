@@ -16,7 +16,7 @@ export default function() {
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#somersault-powerful')) && !animHasTriggered) {
-      iMac.animate({ left: '150px' }, 600, 'easeOutExpo');
+      iMac.animate({ left: '0' }, 600, 'easeOutExpo');
       animHasTriggered = true;
     }
 

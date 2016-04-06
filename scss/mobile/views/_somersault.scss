@@ -51,7 +51,7 @@
   flex-flow: column-reverse;
 
   .images {
-    height: 500px;
+    height: 345px;
   }
 }
 
@@ -129,10 +129,17 @@
 
 // -----------------------------------------------------------------------------
 
+#somersault-powerful .images {
+  height: 250px;
+  width: 300px;
+}
+
 #somersault-imac-1 {
   position: absolute;
-  height: 600px;
+  width: 300px;
 
-  top: calc(50% - 280px);
-  left: 125%;
+  top: 40px;
+  left: 180%;
+
+  content: url('/somersault-imac-1-mobile.png');
 }

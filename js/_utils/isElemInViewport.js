@@ -17,7 +17,7 @@ export default function(el) {
   const PIECE = (() => {
     let divisor = 1;
     while (document.documentElement.clientHeight < (RECT_HEIGHT - 30) / divisor) {
-      divisor++;
+      divisor += 0.5;
     }
     return (RECT_HEIGHT - 75) / divisor;
   })();

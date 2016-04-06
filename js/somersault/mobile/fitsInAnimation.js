@@ -28,7 +28,7 @@ export default function() {
       iPhone6.delay(225).animate({ top: '161px', opacity: 1 }, 2000, 'easeOutExpo');
       iPhone3.delay(75).animate({ top: '36px', opacity: 1 }, 2000, 'easeOutExpo');
       iPhone4.delay(375).animate({ top: '50px', opacity: 1 }, 2000, 'easeOutExpo');
-      iPhone8.delay(150).animate({ top: '221px', opacity: 1 }, 2000, 'easeOutExpo');
+      iPhone8.delay(150).animate({ top: '211px', opacity: 1 }, 2000, 'easeOutExpo');
 
       animHasTriggered = true;
     }

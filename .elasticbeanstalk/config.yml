@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: null
+    environment: jonathanballandsme
 global:
   application_name: jonathanballands.me
   default_ec2_keyname: aws-eb

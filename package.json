@@ -7,6 +7,7 @@
     "url": "git@github.com:jballands/jonathanballands.me.git"
   },
   "scripts": {
+    "preinstall": "npm install -g gulp",
     "start": "node dist/server/index.js",
     "prestart": "gulp prepare -p production"
   },

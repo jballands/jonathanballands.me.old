@@ -21,7 +21,7 @@
   height: 600px;
 
   top: calc(50% - 280px);
-  left: 125%;
+  left: 150%;
 
   content: url('/code-imac-desktop.png');
 }
@@ -44,12 +44,16 @@
 
 // -----------------------------------------------------------------------------
 
+#mgmt-liquid-bit {
+  height: 600px;
+}
+
 #mgmt-imac {
   position: absolute;
   height: 600px;
 
   top: calc(50% - 280px);
-  left: 125%;
+  left: 150%;
 
   content: url('/mgmt-imac-desktop.png');
 }

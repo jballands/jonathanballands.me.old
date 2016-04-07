@@ -15,10 +15,10 @@ export default function() {
 
   $(window).on('scroll', () => {
 
-    // if (isElemInViewport($('#mgmt-liquid-bit')) && !hasMgmtiMacTriggered) {
-    //   mgmtiMac.animate({ left: '120px' }, 600, 'easeOutExpo');
-    //   hasMgmtiMacTriggered = true;
-    // }
+    if (isElemInViewport($('#mgmt-liquid-bit')) && !hasMgmtiMacTriggered) {
+      mgmtiMac.animate({ left: '120px' }, 600, 'easeOutExpo');
+      hasMgmtiMacTriggered = true;
+    }
 
   });
 }

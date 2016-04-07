@@ -13,7 +13,7 @@ export default function() {
   let designiMac = $('#design-imac');
   // ---------------------------------------------------------------------------
 
-  designiMac.css({ right: '120%' }).stop();
+  designiMac.css({ right: '180%' }).stop();
 
   $(window).on('scroll', () => {
 

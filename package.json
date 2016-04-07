@@ -7,7 +7,8 @@
     "url": "git@github.com:jballands/jonathanballands.me.git"
   },
   "scripts": {
-    "start": "node dist/server/index.js"
+    "start": "node dist/server/index.js",
+    "prestart": "gulp prepare -p production"
   },
   "author": "Jonathan Ballands",
   "license": "GPL-3.0",

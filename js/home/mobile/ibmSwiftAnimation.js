@@ -14,7 +14,6 @@ export default function() {
   let ibmMacbook = $('#ibm-hero-unit-macbook');
   // ---------------------------------------------------------------------------
 
-  // Reset
   ibmiPhone.css({ top: '-100%' });
   ibmMacbook.css({ left: '170%' });
 

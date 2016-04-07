@@ -15,6 +15,9 @@ export default function() {
 
   // ---------------------------------------------------------------------------
 
+  somersaultBackPhone.css({ top: '100%' }).stop();
+  somersaultFrontPhone.css({ top: '100%' }).stop();
+
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#somersault-hero-unit-trigger')) && !hasSomersaultUnitTriggered) {

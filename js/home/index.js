@@ -13,19 +13,11 @@ import mobile from './mobile/index.js';
 let viewport = null;
 
 function size() {
-  if (document.documentElement.clientWidth >= LAPTOP_MIN) {
-    if (viewport && viewport != LAPTOP_MIN) {
-      location.reload();
-    }
-
+  if (document.documentElement.clientWidth >= LAPTOP_MIN && viewport != LAPTOP_MIN) {
     viewport = LAPTOP_MIN;
     desktop();
   }
   else if (document.documentElement.clientWidth <= MOBILE_MAX && viewport != MOBILE_MAX) {
-    if (viewport && viewport != MOBILE_MAX) {
-      location.reload();
-    }
-
     viewport = MOBILE_MAX;
     mobile();
   }

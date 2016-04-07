@@ -14,6 +14,9 @@ export default function() {
   let ibmMacbook = $('#ibm-hero-unit-macbook');
   // ---------------------------------------------------------------------------
 
+  ibmiPhone.css({ top: '-100%' });
+  ibmMacbook.css({ left: '120%' });
+
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#ibm-hero-unit-trigger')) && !hasIBMUnitTriggered) {

@@ -31,12 +31,23 @@
 
 // -----------------------------------------------------------------------------
 
+#design-liquid-bit {
+  flex-flow: column-reverse;
+
+  .images {
+    width: 300px;
+    height: 265px;
+  }
+}
+
 #design-imac {
   position: absolute;
-  height: 600px;
+  width: 300px;
 
-  top: calc(50% - 280px);
-  right: 125%;
+  top: 40px;
+  right: 120%;
+
+  content: url('/design-imac-mobile.png');
 }
 
 // -----------------------------------------------------------------------------

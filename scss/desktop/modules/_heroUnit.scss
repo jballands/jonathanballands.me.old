@@ -17,7 +17,7 @@
 
 .hero-unit-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row no-wrap;
   justify-content: center;
   align-items: center;
 

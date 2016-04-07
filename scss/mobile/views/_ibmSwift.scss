@@ -50,11 +50,8 @@
 #ibmswift-iphone-1 {
   position: absolute;
 
-  top: 0;
   left: calc(50% - 150px);
   width: 300px;
-
-  opacity: 0;
 
   content: url('/ibmswift-iphone-1-mobile.png');
 }
@@ -72,10 +69,7 @@
   position: absolute;
   height: 197px;
 
-  left: 50px;
   top: 52px - 25px;
-
-  opacity: 0;
 
   content: url('/ibmswift-macbook-1-mobile.png');
 }
@@ -84,10 +78,7 @@
   position: absolute;
   height: 220px;
 
-  left: 135px;
   top: 25px - 14px;
-
-  opacity: 0;
 
   content: url('/ibmswift-macbook-2-mobile.png');
 }
@@ -96,10 +87,7 @@
   position: absolute;
   height: 245px;
 
-  left: 245px;
   top: 0;
-
-  opacity: 0;
 
   content: url('/ibmswift-macbook-3-mobile.png');
 }

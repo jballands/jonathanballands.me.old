@@ -16,6 +16,10 @@ export default function() {
 
   // ---------------------------------------------------------------------------
 
+  macbookOne.css({ left: '50px', opacity: 0 }).stop();
+  macbookTwo.css({ left: '135px', opacity: 0 }).stop();
+  macbookThree.css({ left: '245px', opacity: 0 }).stop();
+
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#ibm-swift-fluid-roadmap')) && !animHasTriggered) {

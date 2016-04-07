@@ -14,6 +14,8 @@ export default function() {
 
   // ---------------------------------------------------------------------------
 
+  eyePoppingiPhone.css({ top: '0', opacity: 0 });
+
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#ibm-swift-eye-popping')) && !animHasTriggered) {

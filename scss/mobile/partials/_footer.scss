@@ -1,0 +1,27 @@
+.footer {
+  height: 75px;
+  background: $black;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 35px;
+}
+
+.footer-copyright {
+  display: none;
+}
+
+.footer-social {
+  height: 100%;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  a:not(:first-child) {
+    margin-left: 20px;
+  }
+}

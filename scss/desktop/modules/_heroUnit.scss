@@ -1,0 +1,76 @@
+.hero-unit {
+  width: 100%;
+  height: 700px;
+
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  color: $white;
+  text-decoration: none;
+
+  &.no-overflow {
+    overflow: hidden;
+  }
+}
+
+.hero-unit-container {
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.hero-unit-bit {
+  flex: 0 1 calc(50% - 65px);
+  padding: 0 10px 0 10px;
+
+  &:first-child {
+    padding-left: 35px;
+  }
+
+  &:last-child {
+    padding-right: 35px;
+  }
+
+  position: relative;
+  height: 100%;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  &.restricted-width {
+    max-width: $maxUnitBitWidth;
+  }
+}
+
+.hero-unit-arrow {
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 25px);
+
+  @include animation('bounce 7s infinite');
+}
+
+@include keyframes(bounce) {
+  30% {
+    bottom: 30px;
+  }
+  34% {
+    bottom: 23px;
+  }
+  38% {
+    bottom: 30px;
+  }
+  42% {
+    bottom: 23px;
+  }
+  46% {
+    bottom: 30px;
+  }
+}

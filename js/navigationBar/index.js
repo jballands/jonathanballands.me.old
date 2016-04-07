@@ -1,5 +1,5 @@
 /*
- *  /js/_modules/navigationBar.js
+ *  /js/navigationBar/index.js
  *  © 2016 Jonathan Ballands
  *
  *  http://codepen.io/designcouch/pen/Atyop

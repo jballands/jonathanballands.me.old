@@ -1,0 +1,126 @@
+.somersault {
+  background: $orange;
+}
+
+.somersault-spacer {
+  padding-top: 70px;
+}
+
+.somersault-liquid-bit-small {
+  @include liquid-bit(2.25);
+}
+
+.somersault-liquid-bit-big {
+  @include liquid-bit(6.75);
+}
+
+// -----------------------------------------------------------------------------
+
+#somersault-page-hero-unit {
+  height: auto;
+
+  .images {
+    height: 545px;
+  }
+}
+
+#somersault-iphone-1 {
+  position: absolute;
+  width: 376px;
+  //height: 235px;
+
+  top: 45px;
+  left: calc(50% - 188px);
+
+  content: url('/somersault-iphone-1-mobile.png');
+}
+
+#somersault-iphone-2 {
+  position: absolute;
+  width: 266px;
+
+  top: 130px;
+  left: calc(50% - 133px);
+
+  content: url('/somersault-iphone-2-mobile.png');
+}
+
+// -----------------------------------------------------------------------------
+
+#somersault-fits-in {
+  flex-flow: column-reverse;
+
+  .images {
+    height: 345px;
+  }
+}
+
+#somersault-iphone-5 {
+  position: absolute;
+  width: 200px;
+
+  right: 187px - 99px;
+
+  content: url('/somersault-iphone-5-mobile.png');
+}
+
+#somersault-iphone-4 {
+  position: absolute;
+  width: 200px;
+
+  right: 187px - 173px;
+
+  content: url('/somersault-iphone-4-mobile.png');
+}
+
+#somersault-iphone-7 {
+  position: absolute;
+  width: 200px;
+
+  right: 187px - 26px;
+
+  content: url('/somersault-iphone-7-mobile.png');
+}
+
+#somersault-iphone-6 {
+  position: absolute;
+  width: 200px;
+
+  right: 187px - 283px;
+
+  content: url('/somersault-iphone-6-mobile.png');
+}
+
+#somersault-iphone-8 {
+  position: absolute;
+  width: 200px;
+
+  right: 187px - 207px;
+
+  content: url('/somersault-iphone-8-mobile.png');
+}
+
+#somersault-iphone-3 {
+  position: absolute;
+  width: 200px;
+
+  right: 187px + 85px;
+
+  content: url('/somersault-iphone-3-mobile.png');
+}
+
+// -----------------------------------------------------------------------------
+
+#somersault-powerful .images {
+  height: 265px;
+  width: 300px;
+}
+
+#somersault-imac-1 {
+  position: absolute;
+  width: 300px;
+
+  top: 40px;
+
+  content: url('/somersault-imac-1-mobile.png');
+}

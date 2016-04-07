@@ -2,6 +2,7 @@
   "development": {
     "build": {
       "useCompressedCss": false,
+      "useMinifiedDependencies": false,
       "useSourcemaps": true
     },
     "execution": {
@@ -11,6 +12,7 @@
   "production": {
     "build": {
       "useCompressedCss": true,
+      "useMinifiedDependencies": true,
       "useSourcemaps": true
     },
     "execution": {

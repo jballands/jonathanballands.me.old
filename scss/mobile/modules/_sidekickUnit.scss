@@ -1,0 +1,86 @@
+.sidekick-unit {
+  width: calc(100% - 20px);
+  padding: 65px 10px 25px 10px;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  color: $white;
+  text-decoration: none;
+
+  text-align: center;
+}
+
+.sidekick-unit-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: $iPhone6PlusWidth;
+}
+
+.sidekick-unit-columns-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+  margin-top: 25px;
+}
+
+.sidekick-unit-column {
+  flex: 0 1;
+  width: 250px;
+
+  position: relative;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  text-align: center;
+
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.sidekick-unit-column-icon {
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+.sidekick-unit-bit {
+  flex: 1 1;
+
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  text-align: center;
+}
+
+// -----------------------------------------------------------------------------
+
+.lets-chat {
+  margin: 25px;
+}

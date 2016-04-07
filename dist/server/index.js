@@ -75,7 +75,7 @@ app.use('/', (0, _routes2.default)());
 //  Start ----------------------------------------------------------------------
 //
 
-var server = app.listen(_config2.default.port, function () {
+var server = app.listen(process.env.PORT || _config2.default.port, function () {
   _foundation.log.info('Server listening on port ' + _config2.default.port);
 });
 

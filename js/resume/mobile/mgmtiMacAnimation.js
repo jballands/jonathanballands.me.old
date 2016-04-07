@@ -13,6 +13,8 @@ export default function() {
   let mgmtiMac = $('#mgmt-imac');
   // ---------------------------------------------------------------------------
 
+  mgmtiMac.css({ left: '180%' }).stop();
+
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#mgmt-liquid-bit')) && !hasMgmtiMacTriggered) {

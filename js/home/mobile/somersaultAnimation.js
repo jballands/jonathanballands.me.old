@@ -15,8 +15,8 @@ export default function() {
 
   // ---------------------------------------------------------------------------
 
-  somersaultBackPhone.css({ top: '100%' }).stop();
-  somersaultFrontPhone.css({ top: '100%' }).stop();
+  somersaultBackPhone.css({ top: '120%' }).stop();
+  somersaultFrontPhone.css({ top: '120%' }).stop();
 
   $(window).on('scroll', () => {
 

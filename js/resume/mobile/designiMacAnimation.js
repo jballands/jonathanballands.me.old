@@ -13,6 +13,8 @@ export default function() {
   let designiMac = $('#design-imac');
   // ---------------------------------------------------------------------------
 
+  designiMac.css({ right: '120%' }).stop();
+
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#design-liquid-bit')) && !hasDesigniMacTriggered) {

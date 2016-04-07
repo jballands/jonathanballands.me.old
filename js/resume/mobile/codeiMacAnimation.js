@@ -13,6 +13,8 @@ export default function() {
   let codeiMac = $('#code-imac');
   // ---------------------------------------------------------------------------
 
+  codeiMac.css({ left: '180%' }).stop();
+
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#code-liquid-bit')) && !hasCodeiMacTriggered) {

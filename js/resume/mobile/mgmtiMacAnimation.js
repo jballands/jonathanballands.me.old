@@ -16,7 +16,7 @@ export default function() {
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#mgmt-liquid-bit')) && !hasMgmtiMacTriggered) {
-      mgmtiMac.animate({ left: '150px' }, 600, 'easeOutExpo');
+      mgmtiMac.animate({ left: '0' }, 600, 'easeOutExpo');
       hasMgmtiMacTriggered = true;
     }
 

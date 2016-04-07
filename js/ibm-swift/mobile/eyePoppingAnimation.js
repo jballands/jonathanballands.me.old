@@ -14,7 +14,7 @@ export default function() {
 
   // ---------------------------------------------------------------------------
 
-  eyePoppingiPhone.css({ top: '0', opacity: '0' });
+  eyePoppingiPhone.css({ top: '0', opacity: '0' }).stop();
 
   $(window).on('scroll', () => {
 

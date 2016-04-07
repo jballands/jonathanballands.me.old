@@ -14,8 +14,8 @@ export default function() {
   let ibmMacbook = $('#ibm-hero-unit-macbook');
   // ---------------------------------------------------------------------------
 
-  ibmiPhone.css({ top: '-100%' });
-  ibmMacbook.css({ left: '120%' });
+  ibmiPhone.css({ top: '-100%' }).stop();
+  ibmMacbook.css({ left: '120%' }).stop();
 
   $(window).on('scroll', () => {
 

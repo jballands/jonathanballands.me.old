@@ -19,6 +19,13 @@ export default function() {
 
   // ---------------------------------------------------------------------------
 
+  iPhone5.css({ top: '98px', opacity: 0 }).stop();
+  iPhone7.css({ top: '198px', opacity: 0 }).stop();
+  iPhone6.css({ top: '-78px', opacity: 0 }).stop();
+  iPhone3.css({ top: '298px', opacity: 0 }).stop();
+  iPhone4.css({ top: '-2px', opacity: 0 }).stop();
+  iPhone8.css({ top: '28px', opacity: 0 }).stop();
+
   $(window).on('scroll', () => {
 
     // 338px is 50% of the parent container, 30px displacement

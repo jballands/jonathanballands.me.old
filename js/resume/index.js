@@ -3,19 +3,6 @@
  *  © 2016 Jonathan Ballands
  */
 
-<<<<<<< HEAD
-import selfPromotionAnimation from '../home/selfPromotionAnimation.js';
-import codeiMacAnimation from '../resume/codeiMacAnimation.js';
-import designiMacAnimation from '../resume/designiMacAnimation.js';
-import mgmtiMacAnimation from '../resume/mgmtiMacAnimation.js';
-
-$(document).ready(() => {
-  selfPromotionAnimation();
-  codeiMacAnimation();
-  designiMacAnimation();
-  mgmtiMacAnimation();
-});
-=======
 import {LAPTOP_MIN, MOBILE_MAX} from '../_utils/constants.js';
 
 // -----------------------------------------------------------------------------
@@ -38,4 +25,3 @@ function size() {
 
 window.onresize = size;
 size();
->>>>>>> responsiveness

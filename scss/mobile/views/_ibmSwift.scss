@@ -1,0 +1,103 @@
+.ibm-swift {
+  background: $teal;
+}
+
+.ibm-swift-liquid-bit-small {
+  @include liquid-bit(2.25);
+}
+
+.ibm-swift-liquid-bit-big {
+  @include liquid-bit(6.75);
+}
+
+// -----------------------------------------------------------------------------
+
+#ibm-swift-page-hero-unit {
+  height: auto;
+
+  .images{
+    height: 403px;
+  }
+}
+
+.ibm-swift-spacer {
+  padding-top: 70px;
+}
+
+// -----------------------------------------------------------------------------
+
+#ibmswift-imac-1 {
+  position: absolute;
+  width: 300px;
+
+  top: 30px;
+  left: calc(50% - 150px);
+
+  content: url('/ibmswift-imac-1-mobile.png');
+}
+
+// -----------------------------------------------------------------------------
+
+#ibm-swift-eye-popping {
+  flex-flow: column-reverse;
+
+  .images {
+    margin-top: 10px;
+    height: 207px;
+  }
+}
+
+#ibmswift-iphone-1 {
+  position: absolute;
+
+  left: calc(50% - 150px);
+  width: 300px;
+
+  content: url('/ibmswift-iphone-1-mobile.png');
+}
+
+// -----------------------------------------------------------------------------
+
+#ibm-swift-fluid-roadmap {
+  .images {
+    margin-top: 25px;
+    height: 260px;
+  }
+}
+
+#ibmswift-macbook-1 {
+  position: absolute;
+  height: 197px;
+
+  top: 52px - 25px;
+
+  content: url('/ibmswift-macbook-1-mobile.png');
+}
+
+#ibmswift-macbook-2 {
+  position: absolute;
+  height: 220px;
+
+  top: 25px - 14px;
+
+  content: url('/ibmswift-macbook-2-mobile.png');
+}
+
+#ibmswift-macbook-3 {
+  position: absolute;
+  height: 245px;
+
+  top: 0;
+
+  content: url('/ibmswift-macbook-3-mobile.png');
+}
+
+// -----------------------------------------------------------------------------
+
+#apple-insider {
+  height: 100px;
+}
+
+#nasdaq {
+  height: 100px;
+}

@@ -1,0 +1,77 @@
+.ibm-swift {
+  background: $teal;
+}
+
+.ibm-swift-spacer {
+  padding-top: 70px;
+}
+
+// -----------------------------------------------------------------------------
+
+#ibmswift-imac-1 {
+  position: absolute;
+  height: 700px;
+
+  top: 0;
+  left: 200px;
+
+  content: url('/ibmswift-imac-1-desktop.png');
+}
+
+// -----------------------------------------------------------------------------
+
+#ibm-swift-eye-popping {
+  height: 450px;
+}
+
+#ibmswift-iphone-1 {
+  position: absolute;
+  height: 400px;
+
+  right: 50px;
+
+  content: url('/ibmswift-iphone-1-desktop.png');
+}
+
+// -----------------------------------------------------------------------------
+
+#ibm-swift-fluid-roadmap {
+  height: 325px;
+}
+
+#ibmswift-macbook-1 {
+  position: absolute;
+  height: 370px;
+
+  top: calc(50% - 210px);
+
+  content: url('/ibmswift-macbook-1-desktop.png');
+}
+
+#ibmswift-macbook-2 {
+  position: absolute;
+  height: 415px;
+
+  top: calc(50% - 235px);
+
+  content: url('/ibmswift-macbook-1-desktop.png');
+}
+
+#ibmswift-macbook-3 {
+  position: absolute;
+  height: 460px;
+
+  top: calc(50% - 255px);
+  
+  content: url('/ibmswift-macbook-1-desktop.png');
+}
+
+// -----------------------------------------------------------------------------
+
+#apple-insider {
+  height: 100px;
+}
+
+#nasdaq {
+  height: 100px;
+}

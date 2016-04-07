@@ -1,0 +1,56 @@
+.resume {
+  background: $darkPurple;
+}
+
+.resume-liquid-bit-small {
+  @include liquid-bit(2.25);
+}
+
+.resume-liquid-bit-big {
+  @include liquid-bit(6.75);
+}
+
+// -----------------------------------------------------------------------------
+
+#code-liquid-bit {
+  height: 600px;
+}
+
+#code-imac {
+  position: absolute;
+  height: 600px;
+
+  top: calc(50% - 280px);
+
+  content: url('/code-imac-desktop.png');
+}
+
+// -----------------------------------------------------------------------------
+
+#design-liquid-bit {
+  height: 600px;
+}
+
+#design-imac {
+  position: absolute;
+  height: 600px;
+
+  top: calc(50% - 280px);
+
+  content: url('/design-imac-desktop.png');
+}
+
+// -----------------------------------------------------------------------------
+
+#mgmt-liquid-bit {
+  height: 600px;
+}
+
+#mgmt-imac {
+  position: absolute;
+  height: 600px;
+
+  top: calc(50% - 280px);
+
+  content: url('/mgmt-imac-desktop.png');
+}

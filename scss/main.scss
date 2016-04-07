@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import 'vendor/normalize';
 @import 'vendor/animationMixin';
 
@@ -12,26 +13,32 @@
 
 @import 'partials/navigationBar';
 @import 'partials/footer';
+=======
+// -----------------------------------------------------------------------------
+//  Vendors
+// -----------------------------------------------------------------------------
+>>>>>>> responsiveness
 
-@import 'views/home';
-@import 'views/ibmSwift';
-@import 'views/somersault';
-@import 'views/resume';
+@import 'vendor/animationMixin';
+@import 'vendor/normalize';
 
 // -----------------------------------------------------------------------------
+//  Core
+// -----------------------------------------------------------------------------
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:700,800);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
-@import url(https://fonts.googleapis.com/css?family=Yellowtail);
+@import 'core/colors';
+@import 'core/constants';
+@import 'core/fonts';
+@import 'core/mixins';
 
-.container {
-  overflow: hidden;
+// -----------------------------------------------------------------------------
+//  Sheets
+// -----------------------------------------------------------------------------
+
+@media (min-width: $laptopMin) {
+  @import 'desktop/desktop';
 }
 
-.content {
-
-}
-
-p {
-  margin: 1em 0 0 0;
+@media (max-width: $mobileMax) {
+  @import 'mobile/mobile';
 }

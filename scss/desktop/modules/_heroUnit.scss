@@ -1,0 +1,172 @@
+.hero-unit {
+  width: 100%;
+  height: 700px;
+
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  color: $white;
+  text-decoration: none;
+
+  &.no-overflow {
+    overflow: hidden;
+  }
+}
+
+.hero-unit-container {
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.hero-unit-bit {
+  flex: 0 1 calc(50% - 65px);
+  padding: 0 10px 0 10px;
+
+  &:first-child {
+    padding-left: 35px;
+  }
+
+  &:last-child {
+    padding-right: 35px;
+  }
+
+  position: relative;
+  height: 100%;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  &.restricted-width {
+    max-width: $maxUnitBitWidth;
+  }
+}
+
+.hero-unit-arrow {
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 25px);
+
+  @include animation('bounce 7s infinite');
+}
+
+@include keyframes(bounce) {
+  30% {
+    bottom: 30px;
+  }
+  34% {
+    bottom: 23px;
+  }
+  38% {
+    bottom: 30px;
+  }
+  42% {
+    bottom: 23px;
+  }
+  46% {
+    bottom: 30px;
+  }
+}
+
+// -----------------------------------------------------------------------------
+//  Tablet
+// -----------------------------------------------------------------------------
+
+@media (max-width: $tabletMax) and (min-width: $tabletMin) {
+
+}
+
+// -----------------------------------------------------------------------------
+//  Phone
+// -----------------------------------------------------------------------------
+
+@media (max-width: $phoneMax) {
+
+  .hero-unit-arrow {
+    bottom: 20px;
+    left: calc(50% - 15px);
+
+    @include animation('bounceResponsive 7s infinite');
+
+    img {
+      width: 30px;
+    }
+  }
+
+  @include keyframes(bounceResponsive) {
+    30% {
+      bottom: 20px;
+    }
+    34% {
+      bottom: 14px;
+    }
+    38% {
+      bottom: 20px;
+    }
+    42% {
+      bottom: 14px;
+    }
+    46% {
+      bottom: 20px;
+    }
+  }
+
+}
+
+// -----------------------------------------------------------------------------
+// Tablet + Phone
+// -----------------------------------------------------------------------------
+
+@media (max-width: $tabletMax) {
+
+  .hero-unit {
+    height: 100vh;
+    min-height: 500px;
+    //max-height: 700px;
+  }
+
+  .hero-unit-container {
+    flex-flow: column wrap;
+  }
+
+  .hero-unit-bit {
+    flex: 1 1 calc(50% - 30px);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 0;
+    width: 100%;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &.restricted-width {
+      width: 100%;
+    }
+
+    &.restricted-height {
+      flex-basis: 33%;
+    }
+
+    &.rsp-flex-start {
+      justify-content: flex-start;
+    }
+
+    &.rsp-flex-end {
+      justify-content: flex-end;
+    }
+  }
+
+}

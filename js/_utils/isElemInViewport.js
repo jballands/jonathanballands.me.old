@@ -12,14 +12,20 @@ export default function(el) {
   }
 
   let rect = el.getBoundingClientRect();
+  const RECT_HEIGHT = rect.bottom - rect.top;
 
-  // Modification: Trigger at the halfway point
-  const ONE_THIRD = (rect.bottom - rect.top) / 3;
+  const PIECE = (() => {
+    let divisor = 1;
+    while (document.documentElement.clientHeight < (RECT_HEIGHT - 30) / divisor) {
+      divisor += 0.5;
+    }
+    return (RECT_HEIGHT - 75) / divisor;
+  })();
 
   const TOP_BIT = (rect.top >= 0) &&
-    ((rect.bottom - ONE_THIRD) <= (window.innerHeight || document.documentElement.clientHeight));
-  const BOTTOM_BIT = ((rect.top + ONE_THIRD) >= 0) &&
-    (rect.bottom <= (window.innerHeight || document.documentElement.clientHeight));
+    ((rect.top + PIECE) <= (document.documentElement.clientHeight));
+  const BOTTOM_BIT = ((rect.bottom - PIECE) >= 0) &&
+    (rect.bottom <= (document.documentElement.clientHeight));
 
   return (TOP_BIT || BOTTOM_BIT);
 }

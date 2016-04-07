@@ -32,6 +32,7 @@ var sass = require('gulp-sass');
 //
 //  Utils
 //
+var sequence = require('run-sequence');
 var yargs = require('yargs');
 var buffer = require('vinyl-buffer');
 var source = require('vinyl-source-stream');
@@ -63,8 +64,18 @@ gulp.task('default', function() {
   gulp.start(['build', 'start-server', 'watch']);
 });
 
-gulp.task('prepare', function() {
+gulp.task('prepare', function(done) {
+  var mode = CMD_LINE_OPTIONS.param;
+  var configurationMode = configurations[mode];
+  if (!configurationMode) {
+    console.error(gutil.colors.yellow(mode + ' is not a valid configuration. Check configurations.json for valid configurations.'));
+    process.exit(1);
+  }
 
+  // Options sanitized; save and execute tasks
+  BUILD_OPTIONS = configurationMode.build;
+  EXECUTION_OPTIONS = configurationMode.execution;
+  sequence('build', done);
 });
 
 // -----------------------------------------------------------------------------
@@ -72,8 +83,9 @@ gulp.task('prepare', function() {
 //
 //  Build
 //
-gulp.task('build', ['kill-server', 'clean', 'transpile-server', 'make-config-file', 'bundle', 'sass', 'move-dependencies', 'hbs-injection'], function() {
-  // Nothing to do...
+gulp.task('build', function(done) {
+  sequence(['kill-server', 'clean', 'transpile-server', 'make-config-file',
+  'bundle', 'sass', 'move-dependencies', 'hbs-injection'], done);
 });
 
 //
@@ -134,10 +146,10 @@ gulp.task('bundle', ['clean', 'transpile-server', 'make-config-file'], function(
       })
       .pipe(source(BUILD_OPTIONS.useMinifiedDependencies ? 'bundle.min.js' : 'bundle.js'))
       .pipe(buffer())
-      //.pipe(sourcemaps.init({loadMaps: true}))
-      //.pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, uglify()))
+      .pipe(sourcemaps.init({loadMaps: true}))
+      .pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, uglify()))
       .pipe(header('/* \n *  GENERATED FILE; DO NOT MODIFY!!! \n */\n\n'))
-      //.pipe(gulpif(!BUILD_OPTIONS.useSourcemaps, sourcemaps.write('./')))
+      .pipe(gulpif(!BUILD_OPTIONS.useSourcemaps, sourcemaps.write('./')))
       .pipe(gulp.dest(path.join('./dist/public/js/', folder)))
       .pipe(print(function(filepath) {
         return 'Bundle successfully created -> ' + filepath;

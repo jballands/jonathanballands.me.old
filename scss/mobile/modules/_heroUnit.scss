@@ -1,0 +1,72 @@
+.hero-unit {
+  width: calc(100% - 20px);
+  height: 568px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  color: $white;
+  text-decoration: none;
+
+  padding: 0 10px;
+
+  &.no-overflow {
+    overflow: hidden;
+  }
+}
+
+.hero-unit-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  max-width: $iPhone6PlusWidth;
+}
+
+.hero-unit-bit {
+  flex: 1 1;
+  width: 100%;
+  padding: 0;
+
+  position: relative;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-unit-arrow {
+  position: absolute;
+  bottom: 15px;
+
+  left: calc(50% - 18px);
+
+  @include animation('bounce 7s infinite');
+
+  img {
+    width: 36px;
+  }
+}
+
+@include keyframes(bounce) {
+  30% {
+    bottom: 15px;
+  }
+  34% {
+    bottom: 9px;
+  }
+  38% {
+    bottom: 15px;
+  }
+  42% {
+    bottom: 9px;
+  }
+  46% {
+    bottom: 15px;
+  }
+}

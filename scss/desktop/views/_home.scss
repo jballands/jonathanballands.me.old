@@ -1,0 +1,166 @@
+// -----------------------------------------------------------------------------
+// Images
+// -----------------------------------------------------------------------------
+
+#ibm-hero-unit-iphone {
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  /* Big screens */
+  @media (min-width: $desktopMin) {
+    background-image: url('/ibm-swift-iphone-sandbox.png');
+  }
+  /* Laptops */
+  @media (max-width: $laptopMax) and (min-width: $laptopMin) {
+    background-image: url('/ibm-swift-iphone-sandbox.png');
+  }
+  /* Tablet */
+  @media (max-width: $tabletMax) and (min-width: $tabletMin) {
+    background-image: url('/ibm-swift-iphone-sandbox_resp-phone.png');
+  }
+  /* Phone */
+  @media (max-width: $phoneMax) {
+    background-image: url('/ibm-swift-iphone-sandbox_resp-phone.png');
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+.homepage-hero-unit {
+  background-size: cover;
+  background-position: center center;
+
+  background-color: $backgroundImageTint;
+  background-blend-mode: multiply;
+
+  z-index: 100;
+
+  @media (min-width: $desktopMin) {
+    background-image: url('austin_bridge_3142x2207.jpg');
+  }
+  @media (max-width: $laptopMax) and (min-width: $laptopMin) {
+    background-image: url('austin_bridge_1440x1011.jpg');
+  }
+}
+
+.learn-more {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14pt;
+  letter-spacing: 0.5pt;
+
+  img {
+    margin-right: 15px;
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+.ibm-hero-unit {
+  background: $teal;
+
+  #ibm-hero-unit-iphone {
+    content:url('/ibm-swift-iphone-sandbox-desktop.png');
+
+    height: 425px;
+    width: 100%;
+    position: absolute;
+    left: 45px;
+    z-index: 10;
+  }
+
+  #ibm-hero-unit-macbook {
+    content:url('/ibm-swift-macbook-catalog-desktop.png');
+
+    height: 580px;
+    position: absolute;
+    top: 50px;
+    z-index: 9;
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+.somersault-hero-unit {
+  background: $orange;
+
+  #somersault-hero-unit-back {
+    content: url('/somersault-iphone-back-desktop.png');
+
+    width: 275px;
+
+    position: absolute;
+    right: 285px;
+    z-index: 9;
+  }
+
+  #somersault-hero-unit-front {
+    content: url('/somersault-iphone-front-desktop.png');
+    width: 275px;
+
+    position: absolute;
+    right: 100px;
+    z-index: 10;
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+.self-promotion-hero-unit {
+  background: $purple;
+}
+
+// -----------------------------------------------------------------------------
+// Tablet + Phone
+// -----------------------------------------------------------------------------
+
+@media (max-width: $tabletMax) {
+
+  .learn-more {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 10pt;
+    letter-spacing: 0.5pt;
+
+    img {
+      width: 35px;
+      margin-right: 15px;
+    }
+  }
+
+  .ibm-hero-unit .hero-unit-container {
+    flex-flow: column-reverse;
+
+    #ibm-hero-unit-iphone {
+      width: 100%;
+      height: 175px;
+      position: absolute;
+      left: 5px;
+      z-index: 10;
+
+      // For jQuery animation
+      top: -100%;
+    }
+
+    #ibm-hero-unit-macbook {
+      height: 225px;
+      position: absolute;
+      top: 50px;
+      z-index: 9;
+
+      // For jQuery animation
+      left: 120%;
+    }
+  }
+
+}

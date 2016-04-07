@@ -1,0 +1,105 @@
+.somersault {
+  background: $orange;
+}
+
+// -----------------------------------------------------------------------------
+
+#somersault-page-hero-unit {
+  z-index: 1;
+}
+
+#somersault-iphone-1 {
+  position: absolute;
+  width: 600px;
+  //height: 235px;
+
+  top: 15px;
+  left: 70px;
+
+  content: url('/somersault-iphone-1-desktop.png');
+}
+
+#somersault-iphone-2 {
+  position: absolute;
+  width: 400px;
+
+  top: 150px;
+  left: 200px;
+
+  content: url('/somersault-iphone-2-desktop.png');
+}
+
+// -----------------------------------------------------------------------------
+
+#somersault-fits-in {
+  height: 530px;
+}
+
+#somersault-iphone-5 {
+  position: absolute;
+  width: 400px;
+
+  right: 150px;
+
+  content: url('/somersault-iphone-5-desktop.png');
+}
+
+#somersault-iphone-4 {
+  position: absolute;
+  width: 400px;
+
+  right: 0;
+
+  content: url('/somersault-iphone-4-desktop.png');
+}
+
+#somersault-iphone-7 {
+  position: absolute;
+  width: 400px;
+
+  right: 300px;
+
+  content: url('/somersault-iphone-7-desktop.png');
+}
+
+#somersault-iphone-6 {
+  position: absolute;
+  width: 400px;
+
+  right: 450px;
+
+  content: url('/somersault-iphone-6-desktop.png');
+}
+
+#somersault-iphone-8 {
+  position: absolute;
+  width: 400px;
+
+  right: 605px;
+
+  content: url('/somersault-iphone-8-desktop.png');
+}
+
+#somersault-iphone-3 {
+  position: absolute;
+  width: 400px;
+
+  right: 455px;
+
+  content: url('/somersault-iphone-3-desktop.png');
+}
+
+// -----------------------------------------------------------------------------
+
+#somersault-powerful {
+  height: 510px;
+}
+
+#somersault-imac-1 {
+  position: absolute;
+  height: 600px;
+
+  top: calc(50% - 280px);
+
+  content: url('/somersault-imac-1-desktop.png');
+}

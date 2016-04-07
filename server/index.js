@@ -49,7 +49,7 @@ app.use('/', routes());
 //  Start ----------------------------------------------------------------------
 //
 
-app.listen(config.port, () => {
+let server = app.listen(config.port, () => {
   log.info(`Server listening on port ${config.port}`);
 });
 

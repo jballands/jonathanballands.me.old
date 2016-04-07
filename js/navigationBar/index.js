@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
+ *  /js/_modules/navigationBar.js
+=======
  *  /js/navigationBar/index.js
+>>>>>>> responsiveness
  *  © 2016 Jonathan Ballands
  *
  *  http://codepen.io/designcouch/pen/Atyop

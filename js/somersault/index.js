@@ -5,6 +5,12 @@
 
 import {LAPTOP_MIN, MOBILE_MAX} from '../_utils/constants.js';
 
+<<<<<<< HEAD
+$(document).ready(() => {
+  fitsInAnimation();
+  powerfulAnimation();
+});
+=======
 // -----------------------------------------------------------------------------
 
 import desktop from './desktop/index.js';
@@ -25,3 +31,4 @@ function size() {
 
 window.onresize = size;
 size();
+>>>>>>> responsiveness

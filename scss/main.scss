@@ -1,6 +1,23 @@
+<<<<<<< HEAD
+@import 'vendor/normalize';
+@import 'vendor/animationMixin';
+
+@import 'modules/mixins';
+@import 'modules/constants';
+@import 'modules/colors';
+@import 'modules/fontStyles';
+@import 'modules/heroUnit';
+@import 'modules/sidekickUnit';
+@import 'modules/helloMyNameIs';
+@import 'modules/liquidColumns';
+
+@import 'partials/navigationBar';
+@import 'partials/footer';
+=======
 // -----------------------------------------------------------------------------
 //  Vendors
 // -----------------------------------------------------------------------------
+>>>>>>> responsiveness
 
 @import 'vendor/animationMixin';
 @import 'vendor/normalize';

@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git@github.com:jballands/jonathanballands.me.git"
   },
+  "scripts": {
+    "start": "node dist/server/index.js"
+  },
   "author": "Jonathan Ballands",
   "license": "GPL-3.0",
   "devDependencies": {

@@ -45,6 +45,7 @@ var rename = require('gulp-rename');
 var foreach = require('gulp-foreach');
 var merge = require('merge-stream');
 var series = require('stream-series');
+var concat = require('gulp-concat');
 var print = require('gulp-print');
 
 //
@@ -179,6 +180,20 @@ gulp.task('sass', ['clean', 'transpile-server', 'make-config-file', 'bundle'], f
     }))
     .pipe(rename('style.css'))
     .pipe(gulp.dest('./dist/public'));
+});
+
+//
+//  Concat Bundles
+//
+gulp.task('concat-bundles', [], function() {
+  // TODO: Concatenate all the bundles and, if necessary, uglify them
+});
+
+//
+//  Concat Vendors
+//
+gulp.task('concat-bundles', [], function() {
+  // TODO: Concatenate all the vendors and, if necessary, uglify them
 });
 
 //

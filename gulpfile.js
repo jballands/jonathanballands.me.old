@@ -86,14 +86,15 @@ gulp.task('prepare', function(done) {
 //
 gulp.task('build', function(done) {
   sequence(['kill-server', 'clean', 'transpile-server', 'make-config-file',
-  'bundle', 'sass', 'move-dependencies', 'hbs-injection'], done);
+  'bundle', 'sass', 'concat-bundles', 'concat-vendors', 'move-dependencies',
+  'cleanup', 'hbs-injection'], done);
 });
 
 //
 //  Clean
 //
 gulp.task('clean', function() {
-  return gulp.src(['./public', './dist'])
+  return gulp.src(['./dist'])
     .pipe(rimraf({ force: true }));
 });
 
@@ -151,10 +152,7 @@ gulp.task('bundle', ['clean', 'transpile-server', 'make-config-file'], function(
       .pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, uglify()))
       .pipe(header('/* \n *  GENERATED FILE; DO NOT MODIFY!!! \n */\n\n'))
       .pipe(gulpif(!BUILD_OPTIONS.useSourcemaps, sourcemaps.write('./')))
-      .pipe(gulp.dest(path.join('./dist/public/js/', folder)))
-      .pipe(print(function(filepath) {
-        return 'Bundle successfully created -> ' + filepath;
-      }));
+      .pipe(gulp.dest(path.join('./dist/public/js/', folder)));
   });
 
   //
@@ -185,22 +183,26 @@ gulp.task('sass', ['clean', 'transpile-server', 'make-config-file', 'bundle'], f
 //
 //  Concat Bundles
 //
-gulp.task('concat-bundles', [], function() {
-  // TODO: Concatenate all the bundles and, if necessary, uglify them
+gulp.task('concat-bundles', ['clean', 'transpile-server', 'make-config-file',
+  'bundle', 'sass'], function() {
+
+  return gulp.src('dist/public/js/**/*.js')
+    .pipe(concat('bundle.js'))
+    .pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, uglify()))
+    .pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, rename('bundle.min.js')))
+    .pipe(gulp.dest('dist/public'))
+    .pipe(print(function(filepath) {
+      return 'Bundle successfully created';
+    }));
 });
 
 //
 //  Concat Vendors
 //
-gulp.task('concat-bundles', [], function() {
-  // TODO: Concatenate all the vendors and, if necessary, uglify them
-});
+gulp.task('concat-vendors', ['clean', 'transpile-server', 'make-config-file',
+  'bundle', 'sass', 'concat-bundles'], function() {
 
-//
-//  Move Dependencies
-//
-gulp.task('move-dependencies', ['clean', 'transpile-server', 'make-config-file', 'bundle', 'sass'], function() {
-  var assets = ['assets/**/*'];
+  var globs = [];
 
   // Add the libraries to the move glob
   for (var i = 0 ; i < clientVendors.length ; i++) {
@@ -208,18 +210,44 @@ gulp.task('move-dependencies', ['clean', 'transpile-server', 'make-config-file',
     var library = BUILD_OPTIONS.useMinifiedDependencies ? lib.prod : lib.dev;
 
     if (library) {
-        assets.push(library);
+        globs.push(library);
     }
   }
 
-  return gulp.src(assets)
+  return gulp.src(globs)
+    .pipe(concat('vendors.js'))
+    .pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, uglify()))
+    .pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, rename('vendors.min.js')))
+    .pipe(gulp.dest('dist/public'))
+    .pipe(print(function(filepath) {
+      return 'Vendor bundle successfully created';
+    }));
+});
+
+//
+//  Move Dependencies
+//
+gulp.task('move-dependencies', ['clean', 'transpile-server', 'make-config-file',
+  'bundle', 'sass', 'concat-bundles', 'concat-vendors'], function() {
+  return gulp.src('assets/**/*')
     .pipe(gulp.dest('./dist/public'));
 });
 
 //
+//  Cleanup
+//
+gulp.task('cleanup', ['clean', 'transpile-server', 'make-config-file',
+  'bundle', 'sass', 'concat-bundles', 'concat-vendors', 'move-dependencies'], function() {
+    return gulp.src(['dist/public/js'])
+      .pipe(rimraf({ force: true }));
+  });
+
+//
 //  HBS Injection
 //
-gulp.task('hbs-injection', ['clean', 'transpile-server', 'make-config-file', 'bundle', 'sass', 'move-dependencies'], function() {
+gulp.task('hbs-injection', ['clean', 'transpile-server', 'make-config-file',
+  'bundle', 'sass', 'concat-bundles', 'concat-vendors', 'move-dependencies',
+  'cleanup'], function() {
 
   //
   // Only inject things that got moved as part of the move glob in `move-assets`.
@@ -227,21 +255,23 @@ gulp.task('hbs-injection', ['clean', 'transpile-server', 'make-config-file', 'bu
   return gulp.src('./views/**/*.hbs')
     .pipe(foreach(function(stream, file) {
 
-      var libraries = gulp.src(['**/*.js', '!**/bundle.*', '!**/angular.*', '!**/angular-route.*'],
+      // Set up the globs
+      var vendorsGlob = gulp.src('**/vendors.*',
+        { read: false, cwd: __dirname + '/dist/public' });
+      var bundleGlob = gulp.src('**/bundle.*',
+        { read: false, cwd: __dirname + '/dist/public' });
+      var cssGlob = gulp.src('**/*.css',
         { read: false, cwd: __dirname + '/dist/public' });
 
-      var css = gulp.src(['**/*.css'],
-        { read: false, cwd: __dirname + '/dist/public' });
+      // Perform the injection
+      var vendorsInject = stream.pipe(inject(vendorsGlob, { name: 'vendors' }));
+      var bundleInject = stream.pipe(inject(bundleGlob, { name: 'bundle' }));
+      var cssInject = stream.pipe(inject(cssGlob));
 
-      var bundleGlob = 'js/' + path.basename(file.relative, '.hbs') + '/bundle.*';
-      var bundle = gulp.src(bundleGlob, { read: false, cwd: __dirname + '/dist/public' });
-
-      // Go ahead and inject libraries into the hbs file
-      let librariesInject = stream.pipe(inject(series(libraries, css, bundle), {name: 'libraries'}));
-      let bundleInject = stream.pipe(inject(bundle, {name: 'bundle'}));
-      let cssInject = stream.pipe(inject(css));
-
-      return merge([librariesInject, cssInject]);
+      return merge([vendorsInject, bundleInject, cssInject]);
+    }))
+    .pipe(print(function(filepath) {
+      return 'Injection complete on HBS file';
     }))
     .pipe(gulp.dest('./dist/views'));
 });

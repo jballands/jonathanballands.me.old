@@ -11,6 +11,10 @@ export default function(el) {
       el = el[0];
   }
 
+  if (!el) {
+    return;
+  }
+
   let rect = el.getBoundingClientRect();
   const RECT_HEIGHT = rect.bottom - rect.top;
 

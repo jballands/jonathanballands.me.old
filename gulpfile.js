@@ -86,8 +86,8 @@ gulp.task('prepare', function(done) {
 //
 gulp.task('build', function(done) {
   sequence(['kill-server', 'clean', 'transpile-server', 'make-config-file',
-  'bundle', 'sass', 'concat-bundles', 'concat-vendors', 'move-dependencies',
-  'cleanup', 'hbs-injection'], done);
+  'bundle', 'sass', 'concat-vendors', 'move-dependencies', 'cleanup',
+  'hbs-injection'], done);
 });
 
 //
@@ -128,44 +128,30 @@ gulp.task('bundle', ['clean', 'transpile-server', 'make-config-file'], function(
       return fs.statSync(path.join('./js', folder)).isDirectory() && folder.lastIndexOf('_', 0);
     });
 
-  // Execute the bundler on every index.js in the app directory
-  var tasks = folders.map(function(folder) {
-    var route = path.join(path.join('./js', folder), 'index.js');
 
-    // Set up the bundler
-    var appBundler = browserify({
-      entries: route,
-      debug: BUILD_OPTIONS.useSourcemaps,
-      transform: ['babelify']
-    });
-
-    // Begin bundling client-code together
-    return appBundler
-      .bundle()
-      .on('error', function (error) {
-        gutil.log('BUNDLE ERROR -> ', error.message);
-        this.emit('end');
-      })
-      .pipe(source('bundle.js'))
-      .pipe(buffer())
-      .pipe(sourcemaps.init({loadMaps: true}))
-      .pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, uglify()))
-      .pipe(header('/* \n *  GENERATED FILE; DO NOT MODIFY!!! \n */\n\n'))
-      .pipe(gulpif(!BUILD_OPTIONS.useSourcemaps, sourcemaps.write('./')))
-      .pipe(gulp.dest(path.join('./dist/public/js/', folder)));
+  // Set up the bundler
+  var appBundler = browserify({
+    entries: folders.map((folder) => {
+      return path.join(path.join('./js', folder), 'index.js')
+    }),
+    debug: BUILD_OPTIONS.useSourcemaps,
+    transform: ['babelify']
   });
 
-  //
-  // Start the tasks
-  //
-  // Note: Holy crap, getting this to work was horrible. You need to call this
-  // poorly-named `merge-stream` module, which merges the async `task` stream
-  // with... nothing. But the good news is this module forces the main stream to
-  // to wait until the async stream finishes before continuing.
-  //
-  //  Just think before you use gulp.js
-  //
-  return merge(tasks);
+  // Begin bundling client-code together
+  return appBundler
+    .bundle()
+    .on('error', function (error) {
+      gutil.log('BUNDLE ERROR -> ', error.message);
+      this.emit('end');
+    })
+    .pipe(source(BUILD_OPTIONS.useMinifiedDependencies ? 'bundle.min.js' : 'bundle.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, uglify()))
+    .pipe(header('/* \n *  GENERATED FILE; DO NOT MODIFY!!! \n */\n\n'))
+    .pipe(gulpif(!BUILD_OPTIONS.useSourcemaps, sourcemaps.write('./')))
+    .pipe(gulp.dest(path.join('./dist/public/')));
 });
 
 //
@@ -181,26 +167,10 @@ gulp.task('sass', ['clean', 'transpile-server', 'make-config-file', 'bundle'], f
 });
 
 //
-//  Concat Bundles
-//
-gulp.task('concat-bundles', ['clean', 'transpile-server', 'make-config-file',
-  'bundle', 'sass'], function() {
-
-  return gulp.src('dist/public/js/**/*.js')
-    .pipe(concat('bundle.js'))
-    .pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, uglify()))
-    .pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, rename('bundle.min.js')))
-    .pipe(gulp.dest('dist/public'))
-    .pipe(print(function(filepath) {
-      return 'Bundle successfully created';
-    }));
-});
-
-//
 //  Concat Vendors
 //
 gulp.task('concat-vendors', ['clean', 'transpile-server', 'make-config-file',
-  'bundle', 'sass', 'concat-bundles'], function() {
+  'bundle', 'sass'], function() {
 
   var globs = [];
 
@@ -228,7 +198,7 @@ gulp.task('concat-vendors', ['clean', 'transpile-server', 'make-config-file',
 //  Move Dependencies
 //
 gulp.task('move-dependencies', ['clean', 'transpile-server', 'make-config-file',
-  'bundle', 'sass', 'concat-bundles', 'concat-vendors'], function() {
+  'bundle', 'sass', 'concat-vendors'], function() {
   return gulp.src('assets/**/*')
     .pipe(gulp.dest('./dist/public'));
 });
@@ -246,7 +216,7 @@ gulp.task('cleanup', ['clean', 'transpile-server', 'make-config-file',
 //  HBS Injection
 //
 gulp.task('hbs-injection', ['clean', 'transpile-server', 'make-config-file',
-  'bundle', 'sass', 'concat-bundles', 'concat-vendors', 'move-dependencies',
+  'bundle', 'sass', 'concat-vendors', 'move-dependencies',
   'cleanup'], function() {
 
   //

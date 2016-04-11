@@ -146,7 +146,7 @@ gulp.task('bundle', ['clean', 'transpile-server', 'make-config-file'], function(
         gutil.log('BUNDLE ERROR -> ', error.message);
         this.emit('end');
       })
-      .pipe(source(BUILD_OPTIONS.useMinifiedDependencies ? 'bundle.min.js' : 'bundle.js'))
+      .pipe(source('bundle.js'))
       .pipe(buffer())
       .pipe(sourcemaps.init({loadMaps: true}))
       .pipe(gulpif(BUILD_OPTIONS.useMinifiedDependencies, uglify()))

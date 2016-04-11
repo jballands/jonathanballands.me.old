@@ -131,9 +131,7 @@ gulp.task('bundle', ['clean', 'transpile-server', 'make-config-file'], function(
 
   // Set up the bundler
   var appBundler = browserify({
-    entries: folders.map((folder) => {
-      return path.join(path.join('./js', folder), 'index.js')
-    }),
+    entries: ['js/index.js'],
     debug: BUILD_OPTIONS.useSourcemaps,
     transform: ['babelify']
   });

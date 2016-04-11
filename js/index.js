@@ -1,14 +1,14 @@
 /*
- *  /js/somersault/index.js
+ *  /js/index.js
  *  © 2016 Jonathan Ballands
  */
 
-import {LAPTOP_MIN, MOBILE_MAX} from '../_utils/constants.js';
+import {LAPTOP_MIN, MOBILE_MAX} from './_utils/constants.js';
 
 // -----------------------------------------------------------------------------
 
-import desktop from './desktop/index.js';
-import mobile from './mobile/index.js';
+import desktop from './desktop.js';
+import mobile from './mobile.js';
 
 let viewport = null;
 

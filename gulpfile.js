@@ -207,7 +207,7 @@ gulp.task('move-dependencies', ['clean', 'transpile-server', 'make-config-file',
 //  Cleanup
 //
 gulp.task('cleanup', ['clean', 'transpile-server', 'make-config-file',
-  'bundle', 'sass', 'concat-bundles', 'concat-vendors', 'move-dependencies'], function() {
+  'bundle', 'sass', 'concat-vendors', 'move-dependencies'], function() {
     return gulp.src(['dist/public/js'])
       .pipe(rimraf({ force: true }));
   });

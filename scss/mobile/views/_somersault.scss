@@ -111,9 +111,11 @@
 
 // -----------------------------------------------------------------------------
 
-#somersault-powerful .images {
-  height: 265px;
-  width: 300px;
+#somersault-powerful {
+  .images {
+    height: 265px;
+    width: 300px;
+  }
 }
 
 #somersault-imac-1 {

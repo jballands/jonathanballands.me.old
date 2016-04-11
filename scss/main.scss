@@ -18,10 +18,10 @@
 //  Sheets
 // -----------------------------------------------------------------------------
 
-@media (min-width: $laptopMin) {
-  @import 'desktop/desktop';
-}
-
 @media (max-width: $mobileMax) {
   @import 'mobile/mobile';
+}
+
+@media (min-width: $laptopMin) {
+  @import 'desktop/desktop';
 }

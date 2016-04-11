@@ -16,6 +16,7 @@
 }
 
 .sidekick-unit-container {
+  flex: 1 1;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -33,7 +34,7 @@
 }
 
 .sidekick-unit-column {
-  flex: 0 1;
+  flex: 1 0;
   width: 250px;
 
   position: relative;
@@ -67,7 +68,7 @@
 }
 
 .sidekick-unit-bit {
-  flex: 1 1;
+  flex: 1 1 auto;
 
   position: relative;
   width: 100%;

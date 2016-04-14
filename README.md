@@ -14,7 +14,8 @@ _Note: This guide assumes you are using [Node 4.3](https://nodejs.org/en/)._
 
 ## Usage
 
-You can run the project in two ways:
+My website uses a proprietary build mechanism using the [Gulp](http://gulpjs.com/)
+build system. You can use the application in the following ways:
 
 ### gulp
 

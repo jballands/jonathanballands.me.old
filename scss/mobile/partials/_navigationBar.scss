@@ -131,6 +131,8 @@
 
   .hbm-navigation-item {
     font-size: 16pt;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
 
     &:not(:first-child) {
       margin-top: 15px;

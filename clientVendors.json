@@ -1,9 +1,7 @@
 [
   {
     "dev": "node_modules/jquery/dist/jquery.js",
-    "cdn": "//code.jquery.com/jquery-2.2.1.min.js",
-    "prod": "node_modules/jquery/dist/jquery.min.js",
-    "cdn_test": "window.jQuery"
+    "prod": "node_modules/jquery/dist/jquery.min.js"
   },
   {
     "dev": "js/_vendors/jqueryEasing.js",

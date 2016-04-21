@@ -36,6 +36,7 @@
     "gulp-watch": "~4.3.5",
     "jquery": "~2.2.1",
     "loglevel": "~1.4.0",
+    "loose-envify": "^1.1.0",
     "merge-stream": "~1.0.0",
     "run-sequence": "^1.1.5",
     "stream-series": "~0.1.1",

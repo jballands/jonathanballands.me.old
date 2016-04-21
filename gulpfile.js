@@ -28,6 +28,7 @@ var babel = require('gulp-babel');
 var inject = require('gulp-inject');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
+var envify = require('loose-envify');
 
 //
 //  Utils

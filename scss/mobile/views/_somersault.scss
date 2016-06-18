@@ -1,5 +1,9 @@
+.somersault-top {
+  @include orangeGradient();
+}
+
 .somersault {
-  background: $orange;
+  background: $dixie;
 }
 
 .somersault-spacer {

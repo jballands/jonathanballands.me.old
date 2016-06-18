@@ -1,5 +1,9 @@
+.ibm-swift-top {
+  @include tealGradient();
+}
+
 .ibm-swift {
-  background: $teal;
+  background: $shakespeare;
 }
 
 .ibm-swift-liquid-bit-small {

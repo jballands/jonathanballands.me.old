@@ -1,17 +1,14 @@
 .homepage-hero-unit {
   background-size: cover;
-  background-position: center center;
-
-  background-color: $backgroundImageTint;
-  background-blend-mode: multiply;
+  background-position: center bottom;
 
   z-index: 100;
 
   @media (min-width: $desktopMin) {
-    background-image: url('austin_bridge_3142x2207.jpg');
+    background-image: url('austin_skyline_high.jpg');
   }
   @media (max-width: $laptopMax) and (min-width: $laptopMin) {
-    background-image: url('austin_bridge_1440x1011.jpg');
+    background-image: url('austin_skyline_medium.jpg');
   }
 }
 
@@ -34,10 +31,10 @@
 // -----------------------------------------------------------------------------
 
 .ibm-hero-unit {
-  background: $teal;
+  @include tealGradient();
 
   #ibm-hero-unit-iphone {
-    content:url('/ibm-swift-iphone-sandbox-desktop.png');
+    content: url('/ibm-swift-iphone-sandbox-desktop.png');
 
     height: 425px;
     position: absolute;
@@ -46,7 +43,7 @@
   }
 
   #ibm-hero-unit-macbook {
-    content:url('/ibm-swift-macbook-catalog-desktop.png');
+    content: url('/ibm-swift-macbook-catalog-desktop.png');
 
     height: 580px;
     position: absolute;
@@ -58,7 +55,7 @@
 // -----------------------------------------------------------------------------
 
 .somersault-hero-unit {
-  background: $orange;
+  @include orangeGradient();
 
   #somersault-hero-unit-back {
     content: url('/somersault-iphone-back-desktop.png');
@@ -83,5 +80,5 @@
 // -----------------------------------------------------------------------------
 
 .self-promotion-hero-unit {
-  background: $purple;
+  @include purpleGradient();
 }

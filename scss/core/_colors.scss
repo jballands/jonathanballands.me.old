@@ -1,15 +1,48 @@
 $white:                 #FFF;
 $black:                 #000;
 
+$apricot:               #EFA17B;
+
 $teal:                  #3DCC94;
+$shamrock:              #3DCC94;
+$shakespeare:           #47BECF;
+
 $orange:                #ED5C18;
+$flamingo:              #ED5C18;
+$dixie:                 #E89B18;
+
 $purple:                #9932F3;
+$electric-violet:       #9932F3;
+$purple-heart:          #BD1FCB;
 
 $darkTeal:              #26805D;
 $darkOrange:            #843713;
 $darkPurple:            #561192;
 
-$backgroundImageTint:   rgba(0, 133, 255, 1);
+// -----------------------------------------------------------------------------
+
+@mixin tealGradient() {
+  background: linear-gradient($shamrock, $shakespeare);
+  background: -webkit-linear-gradient($shamrock, $shakespeare);
+  background: -o-linear-gradient($shamrock, $shakespeare);
+  background: -moz-linear-gradient($shamrock, $shakespeare);
+}
+
+@mixin orangeGradient() {
+  background: linear-gradient($flamingo, $dixie);
+  background: -webkit-linear-gradient($flamingo, $dixie);
+  background: -o-linear-gradient($flamingo, $dixie);
+  background: -moz-linear-gradient($flamingo, $dixie);
+}
+
+@mixin purpleGradient() {
+  background: linear-gradient($electric-violet, $purple-heart);
+  background: -webkit-linear-gradient($electric-violet, $purple-heart);
+  background: -o-linear-gradient($electric-violet, $purple-heart);
+  background: -moz-linear-gradient($electric-violet, $purple-heart);
+}
+
+// -----------------------------------------------------------------------------
 
 .dark-teal {
   color: $darkTeal;

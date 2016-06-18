@@ -51,7 +51,7 @@
 
 .hero-unit-arrow {
   position: absolute;
-  bottom: 30px;
+  bottom: 35px;
   left: calc(50% - 25px);
 
   @include animation('bounce 7s infinite');
@@ -59,18 +59,18 @@
 
 @include keyframes(bounce) {
   30% {
-    bottom: 30px;
+    bottom: 35px;
   }
   34% {
-    bottom: 23px;
+    bottom: 25px;
   }
   38% {
-    bottom: 30px;
+    bottom: 35px;
   }
   42% {
-    bottom: 23px;
+    bottom: 25px;
   }
   46% {
-    bottom: 30px;
+    bottom: 35px;
   }
 }

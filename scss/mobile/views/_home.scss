@@ -2,13 +2,10 @@
   background-size: cover;
   background-position: center center;
 
-  background-color: $backgroundImageTint;
-  background-blend-mode: multiply;
-
   z-index: 100;
 
   @media (max-width: $mobileMax) {
-    background-image: url('/austin_bridge_768x539.jpg');
+    background-image: url('/austin_skyline_small.jpg');
   }
 
   .hero-unit-bit:first-child {
@@ -41,7 +38,7 @@
 // -----------------------------------------------------------------------------
 
 .ibm-hero-unit {
-  background: $teal;
+  @include tealGradient();
 
   .hero-unit-container {
     flex-flow: column-reverse;
@@ -77,7 +74,7 @@
 // -----------------------------------------------------------------------------
 
 .somersault-hero-unit {
-  background: $orange;
+  @include orangeGradient();
 
   .hero-unit-container {
     flex-flow: column-reverse;
@@ -112,5 +109,5 @@
 // -----------------------------------------------------------------------------
 
 .self-promotion-hero-unit {
-  background: $purple;
+  @include purpleGradient();
 }

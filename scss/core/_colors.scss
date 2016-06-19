@@ -22,10 +22,10 @@ $darkPurple:            #561192;
 // -----------------------------------------------------------------------------
 
 @mixin tealGradient() {
-  background: linear-gradient($shamrock, $shakespeare);
-  background: -webkit-linear-gradient($shamrock, $shakespeare);
-  background: -o-linear-gradient($shamrock, $shakespeare);
-  background: -moz-linear-gradient($shamrock, $shakespeare);
+  background: linear-gradient($shakespeare, $shamrock);
+  background: -webkit-linear-gradient($shakespeare, $shamrock);
+  background: -o-linear-gradient($shakespeare, $shamrock);
+  background: -moz-linear-gradient($shakespeare, $shamrock);
 }
 
 @mixin orangeGradient() {

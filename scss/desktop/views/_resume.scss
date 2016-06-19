@@ -1,5 +1,17 @@
-.resume {
+.resume-top {
   background: $purple-heart;
+
+  .learn-more {
+    color: $blue-gem;
+  }
+}
+
+.resume {
+  background: $electric-violet;
+}
+
+.resume-gradient {
+  @include purpleGradient();
 }
 
 .resume-liquid-bit-small {

@@ -1,57 +1,43 @@
 $white:                 #FFF;
 $black:                 #000;
+$gray:                  #000;
 
 $apricot:               #EFA17B;
 
 $teal:                  #3DCC94;
 $shamrock:              #3DCC94;
 $shakespeare:           #47BECF;
+$eucalyptus:            #26805D;
 
 $orange:                #ED5C18;
 $flamingo:              #ED5C18;
 $dixie:                 #E89B18;
+$copper-canyon:         #843713;
 
 $purple:                #9932F3;
 $electric-violet:       #9932F3;
 $purple-heart:          #BD1FCB;
-
-$darkTeal:              #26805D;
-$darkOrange:            #843713;
-$darkPurple:            #561192;
+$blue-gem:              #561192;
 
 // -----------------------------------------------------------------------------
 
 @mixin tealGradient() {
-  background: linear-gradient($shakespeare, $shamrock);
-  background: -webkit-linear-gradient($shakespeare, $shamrock);
-  background: -o-linear-gradient($shakespeare, $shamrock);
-  background: -moz-linear-gradient($shakespeare, $shamrock);
+  background: linear-gradient($shamrock, $shakespeare);
+  background: -webkit-linear-gradient($shamrock, $shakespeare);
+  background: -o-linear-gradient($shamrock, $shakespeare);
+  background: -moz-linear-gradient($shamrock, $shakespeare);
 }
 
 @mixin orangeGradient() {
-  background: linear-gradient($flamingo, $dixie);
-  background: -webkit-linear-gradient($flamingo, $dixie);
-  background: -o-linear-gradient($flamingo, $dixie);
-  background: -moz-linear-gradient($flamingo, $dixie);
+  background: linear-gradient($dixie, $flamingo);
+  background: -webkit-linear-gradient($dixie, $flamingo);
+  background: -o-linear-gradient($dixie, $flamingo);
+  background: -moz-linear-gradient($dixie, $flamingo);
 }
 
 @mixin purpleGradient() {
-  background: linear-gradient($electric-violet, $purple-heart);
-  background: -webkit-linear-gradient($electric-violet, $purple-heart);
-  background: -o-linear-gradient($electric-violet, $purple-heart);
-  background: -moz-linear-gradient($electric-violet, $purple-heart);
-}
-
-// -----------------------------------------------------------------------------
-
-.dark-teal {
-  color: $darkTeal;
-}
-
-.dark-orange {
-  color: $darkOrange;
-}
-
-.dark-purple {
-  color: $darkPurple;
+  background: linear-gradient($purple-heart, $electric-violet);
+  background: -webkit-linear-gradient($purple-heart, $electric-violet);
+  background: -o-linear-gradient($purple-heart, $electric-violet);
+  background: -moz-linear-gradient($purple-heart, $electric-violet);
 }

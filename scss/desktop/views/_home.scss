@@ -1,14 +1,18 @@
 .homepage-hero-unit {
   background-size: cover;
-  background-position: center bottom;
+  background-position: center top;
 
   z-index: 100;
 
+  * {
+    color: #4e4e4e;
+  }
+
   @media (min-width: $desktopMin) {
-    background-image: url('austin_skyline_high.jpg');
+    background-image: url('cloud_gate_high.jpg');
   }
   @media (max-width: $laptopMax) and (min-width: $laptopMin) {
-    background-image: url('austin_skyline_medium.jpg');
+    background-image: url('cloud_gate_medium.jpg');
   }
 }
 
@@ -50,6 +54,10 @@
     top: 50px;
     z-index: 9;
   }
+
+  .learn-more {
+    color: $eucalyptus;
+  }
 }
 
 // -----------------------------------------------------------------------------
@@ -75,10 +83,18 @@
     right: 100px;
     z-index: 10;
   }
+
+  .learn-more {
+    color: $copper-canyon;
+  }
 }
 
 // -----------------------------------------------------------------------------
 
 .self-promotion-hero-unit {
   @include purpleGradient();
+
+  .learn-more {
+    color: $blue-gem;
+  }
 }

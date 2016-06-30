@@ -10,33 +10,19 @@ export default function() {
   let animHasTriggered = false;
 
   // Set up everything
-  let macbookOne = $('#ibmswift-macbook-1');
-  let macbookTwo = $('#ibmswift-macbook-2');
-  let macbookThree = $('#ibmswift-macbook-3');
+  let macbook = $('#ibmswift-macbook-1');
 
   // ---------------------------------------------------------------------------
 
-  macbookOne.css({ left: '50px', opacity: 0 }).stop();
-  macbookTwo.css({ left: '135px', opacity: 0 }).stop();
-  macbookThree.css({ left: '245px', opacity: 0 }).stop();
+  macbook.css({ left: '150%' }).stop();
 
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#ibm-swift-fluid-roadmap')) && !animHasTriggered) {
-      macbookOne.animate({ left: '25px', opacity: 1 }, 1000, 'easeOutExpo', animateMacbookTwo);
+      macbook.animate({ left: '25px' }, 800, 'easeOutExpo');
       animHasTriggered = true;
     }
 
   });
-
-  // ---------------------------------------------------------------------------
-
-  let animateMacbookTwo = () => {
-    macbookTwo.delay(250).animate({ left: '75px', opacity: 1 }, 1000, 'easeOutExpo', animateMacbookThree);
-  };
-
-  let animateMacbookThree = () => {
-    macbookThree.delay(250).animate({ left: '175px', opacity: 1 }, 1000, 'easeOutExpo');
-  };
 
 }

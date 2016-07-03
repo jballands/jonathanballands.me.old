@@ -15,7 +15,7 @@ export default function() {
   // ---------------------------------------------------------------------------
 
   ibmiPhone.css({ top: '-100%' }).stop();
-  ibmMacbook.css({ left: '170%' }).stop();
+  ibmMacbook.css({ left: '100%' }).stop();
 
   $(window).on('scroll', () => {
 

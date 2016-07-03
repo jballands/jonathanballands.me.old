@@ -14,12 +14,12 @@ export default function() {
 
   // ---------------------------------------------------------------------------
 
-  macbookOne.css({ left: '50px', opacity: 0 }).stop();
+  macbookOne.css({ left: '100%' }).stop();
 
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#ibm-swift-fluid-roadmap')) && !animHasTriggered) {
-      macbookOne.animate({ left: '0', opacity: 1 }, 600, 'easeOutExpo');
+      macbookOne.animate({ left: '0' }, 600, 'easeOutExpo');
       animHasTriggered = true;
     }
 

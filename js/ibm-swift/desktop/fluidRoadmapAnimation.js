@@ -14,7 +14,7 @@ export default function() {
 
   // ---------------------------------------------------------------------------
 
-  macbook.css({ left: '150%' }).stop();
+  macbook.css({ left: '100%' }).stop();
 
   $(window).on('scroll', () => {
 

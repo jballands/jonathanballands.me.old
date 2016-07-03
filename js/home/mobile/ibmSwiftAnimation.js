@@ -12,6 +12,8 @@ export default function() {
   // Set up everything
   let ibmiPhone = $('#ibm-hero-unit-iphone');
   let ibmMacbook = $('#ibm-hero-unit-macbook');
+  const VIEWPORT_WIDTH = ibmMacbook.parent().width();
+
   // ---------------------------------------------------------------------------
 
   ibmiPhone.css({ top: '-100%' }).stop();
@@ -20,8 +22,11 @@ export default function() {
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#ibm-hero-unit-trigger')) && !hasIBMUnitTriggered) {
+
+      console.log(VIEWPORT_WIDTH);
+
       ibmiPhone.animate({ top: '123px' }, 1000, 'easeOutExpo');
-      ibmMacbook.animate({ left: '10px' }, 800, 'easeOutExpo');
+      ibmMacbook.animate({ left: `${(VIEWPORT_WIDTH / 2) - 180}px` }, 800, 'easeOutExpo');
       hasIBMUnitTriggered = true;
     }
 

@@ -13,7 +13,7 @@ export default function() {
   let iMac = $('#somersault-imac-1');
   // ---------------------------------------------------------------------------
 
-  iMac.css({ left: '150%' }).stop();
+  iMac.css({ left: '100%' }).stop();
 
   $(window).on('scroll', () => {
 

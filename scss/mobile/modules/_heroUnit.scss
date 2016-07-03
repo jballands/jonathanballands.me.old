@@ -23,8 +23,7 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-
-  max-width: $iPhone6PlusWidth;
+  width: 100%;
 }
 
 .hero-unit-bit {
@@ -38,6 +37,10 @@
   flex-flow: column;
   justify-content: center;
   text-align: center;
+
+  &.text {
+    max-width: $iPhone6PlusWidth;
+  }
 }
 
 .hero-unit-arrow {

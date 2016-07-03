@@ -68,10 +68,9 @@
 }
 
 .sidekick-unit-bit {
-  flex: 1 1 auto;
+  flex: 0 0 100%;
 
   position: relative;
-  width: 100%;
 
   display: flex;
   flex-flow: column;

@@ -13,12 +13,12 @@ export default function() {
   let iMac = $('#somersault-imac-1');
   // ---------------------------------------------------------------------------
 
-  iMac.css({ left: '180%' }).stop();
+  iMac.css({ left: '100%' }).stop();
 
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#somersault-powerful')) && !animHasTriggered) {
-      iMac.animate({ left: '0' }, 600, 'easeOutExpo');
+      iMac.animate({ left: '37px' }, 600, 'easeOutExpo');
       animHasTriggered = true;
     }
 

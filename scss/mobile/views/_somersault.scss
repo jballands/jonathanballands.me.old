@@ -56,6 +56,7 @@
 
   .images {
     height: 345px;
+    width: calc(100% + 20px);
   }
 }
 
@@ -118,7 +119,7 @@
 #somersault-powerful {
   .images {
     height: 265px;
-    width: 300px;
+    width: calc(100% + 20px);
   }
 }
 

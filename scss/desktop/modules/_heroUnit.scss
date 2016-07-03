@@ -26,7 +26,7 @@
 }
 
 .hero-unit-bit {
-  flex: 0 0 50%;
+  flex: 0 0 calc(50% - 20px);
   padding: 0 10px 0 10px;
 
   &:first-child {

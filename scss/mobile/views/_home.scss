@@ -55,18 +55,18 @@
   #ibm-hero-unit-iphone {
     content:url('/ibm-swift-iphone-sandbox-mobile.png');
 
-    height: 152px;
+    width: 95px;
     position: absolute;
-    left: calc(50% - 195px);
+    left: calc(50% - 220px);
     z-index: 10;
   }
 
   #ibm-hero-unit-macbook {
     content:url('/ibm-swift-macbook-catalog-mobile.png');
 
-    height: 215px;
+    width: $iPhone6PlusWidth;
     position: absolute;
-    top: 50px;
+    top: 40px;
     z-index: 9;
   }
 

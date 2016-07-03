@@ -11,6 +11,8 @@ export default function() {
 
   // Set up everything
   let iMac = $('#somersault-imac-1');
+  const VIEWPORT_WIDTH = iMac.parent().width();
+
   // ---------------------------------------------------------------------------
 
   iMac.css({ left: '100%' }).stop();
@@ -18,7 +20,7 @@ export default function() {
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#somersault-powerful')) && !animHasTriggered) {
-      iMac.animate({ left: '37px' }, 600, 'easeOutExpo');
+      iMac.animate({ left: `${(VIEWPORT_WIDTH / 2) - (iMac.width() / 2)}px` }, 600, 'easeOutExpo');
       animHasTriggered = true;
     }
 

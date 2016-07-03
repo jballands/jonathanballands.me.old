@@ -19,11 +19,18 @@ export default function() {
   ibmiPhone.css({ top: '-100%' }).stop();
   ibmMacbook.css({ left: '100%' }).stop();
 
+  let macbookEndPoint = `${(VIEWPORT_WIDTH / 2) - (ibmMacbook.width() / 2)}px`;
+  // Do we need to shift the content over?
+  if (VIEWPORT_WIDTH < 414) {
+    ibmiPhone.css({ left: '0' });
+    macbookEndPoint = '15px';
+  }
+
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#ibm-hero-unit-trigger')) && !hasIBMUnitTriggered) {
       ibmiPhone.animate({ top: '123px' }, 1000, 'easeOutExpo');
-      ibmMacbook.animate({ left: `${(VIEWPORT_WIDTH / 2) - 180}px` }, 800, 'easeOutExpo');
+      ibmMacbook.animate({ left: macbookEndPoint }, 800, 'easeOutExpo');
       hasIBMUnitTriggered = true;
     }
 

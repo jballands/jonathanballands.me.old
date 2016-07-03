@@ -1,11 +1,19 @@
 .resume-top {
-  @include purpleGradient();
-  border-bottom: 1px solid $blue-gem;
+  background: $purple-heart;
+
+  .learn-more {
+    color: $blue-gem;
+  }
 }
 
 .resume {
-  background: $purple-heart;
+  background: $electric-violet;
 }
+
+.resume-gradient {
+  @include purpleGradient();
+}
+
 
 .resume-liquid-bit-small {
   @include liquid-bit(2.25);

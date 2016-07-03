@@ -69,6 +69,10 @@
     top: 50px;
     z-index: 9;
   }
+
+  .learn-more {
+    color: $eucalyptus;
+  }
 }
 
 // -----------------------------------------------------------------------------
@@ -104,10 +108,18 @@
     right: calc(50% - 65px - 45px);
     z-index: 10;
   }
+
+  .learn-more {
+    color: $copper-canyon;
+  }
 }
 
 // -----------------------------------------------------------------------------
 
 .self-promotion-hero-unit {
   @include purpleGradient();
+
+  .learn-more {
+    color: $blue-gem;
+  }
 }

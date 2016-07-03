@@ -26,7 +26,7 @@
 }
 
 .hero-unit-bit {
-  flex: 0 1 calc(50% - 65px);
+  flex: 0 0 50%;
   padding: 0 10px 0 10px;
 
   &:first-child {
@@ -44,8 +44,15 @@
   flex-flow: column;
   justify-content: center;
 
-  &.restricted-width {
+  .content-container {
     max-width: $maxUnitBitWidth;
+
+    &.align-left {
+      align-self: flex-start;
+    }
+    &.align-right {
+      align-self: flex-end;
+    }
   }
 }
 

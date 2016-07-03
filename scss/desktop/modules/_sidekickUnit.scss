@@ -77,8 +77,15 @@
   flex-flow: column;
   justify-content: center;
 
-  &.restricted-width {
+  .content-container {
     max-width: $maxUnitBitWidth;
+
+    &.align-left {
+      align-self: flex-start;
+    }
+    &.align-right {
+      align-self: flex-end;
+    }
   }
 }
 
@@ -91,4 +98,9 @@
 
 .question-bottom {
   text-align: right;
+  max-width: $maxUnitBitWidth;
+}
+
+.lets-chat {
+  max-width: $maxUnitBitWidth;
 }

@@ -1,5 +1,5 @@
 /*
- *  /js/ibm-swift/desktop/fluidRoadmapAnimation.js
+ *  /js/ibm-swift/mobile/fluidRoadmapAnimation.js
  *  © 2016 Jonathan Ballands
  */
 
@@ -19,7 +19,7 @@ export default function() {
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#ibm-swift-fluid-roadmap')) && !animHasTriggered) {
-      macbookOne.animate({ left: '0' }, 600, 'easeOutExpo');
+      macbookOne.animate({ left: '30px' }, 600, 'easeOutExpo');
       animHasTriggered = true;
     }
 

@@ -13,12 +13,12 @@ export default function() {
   let mgmtiMac = $('#mgmt-imac');
   // ---------------------------------------------------------------------------
 
-  mgmtiMac.css({ left: '150%' }).stop();
+  mgmtiMac.css({ left: '100%' }).stop();
 
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#mgmt-liquid-bit')) && !hasMgmtiMacTriggered) {
-      mgmtiMac.animate({ left: '120px' }, 600, 'easeOutExpo');
+      mgmtiMac.animate({ left: '100px' }, 600, 'easeOutExpo');
       hasMgmtiMacTriggered = true;
     }
 

@@ -13,12 +13,12 @@ export default function() {
   let codeiMac = $('#code-imac');
   // ---------------------------------------------------------------------------
 
-  codeiMac.css({ left: '150%' }).stop();
+  codeiMac.css({ left: '100%' }).stop();
 
   $(window).on('scroll', () => {
 
     if (isElemInViewport($('#code-liquid-bit')) && !hasCodeiMacTriggered) {
-      codeiMac.animate({ left: '120px' }, 600, 'easeOutExpo');
+      codeiMac.animate({ left: '100px' }, 600, 'easeOutExpo');
       hasCodeiMacTriggered = true;
     }
 
